@@ -17,7 +17,7 @@ The current response engine is deterministic: it returns authored responses for 
 
 ## Guided example of the planned experience
 
-The landing page opens with a native-scroll, cumulative scripted workflow: twelve student–patient exchanges, correction of a mistaken question premise, question-domain coverage of 10/12, quote-linked feedback and retry goals. It previews the planned API experience separately from the authored-response practice engine. Student-only scroll-driven transcription illustrates future voice input without accessing a microphone. The demonstration makes no live API calls and does not represent measured model performance.
+The landing page opens with the project purpose and learning loop, then continues into a native-scroll, cumulative scripted workflow: twelve student–patient exchanges, correction of a mistaken question premise, question-domain coverage of 10/12, quote-linked feedback and retry goals. It previews the planned API experience separately from the authored-response practice engine. Student-only scroll-driven transcription illustrates future voice input without accessing a microphone. The demonstration makes no live API calls and does not represent measured model performance.
 
 ## Next development step
 
@@ -27,7 +27,7 @@ Planned evaluation focuses on case consistency, unasked-information leakage, quo
 
 ## Evidence and limits
 
-The repository includes a working static demo, original Korean source, English review translation, and reproducible software tests. The current bundle passes 153 software tests (67 Korean, 66 English, 20 guided-demo checks). Browser visual review of the latest demonstration remains pending. Software checks are not clinical validation. No user, revenue, funding, or educational-effectiveness claims are made.
+The repository includes a working static demo, original Korean source, English review translation, and reproducible software tests. The current bundle passes 160 software tests (67 Korean, 66 English, 20 guided-demo checks, 7 introduction/navigation checks). Browser visual review of the latest demonstration remains pending. Software checks are not clinical validation. No user, revenue, funding, or educational-effectiveness claims are made.
 
 All included cases are original fictional educational material. This is not a patient-care or clinical decision-support tool. No real patient data, private case collection, account identifiers, or credentials are included.
 

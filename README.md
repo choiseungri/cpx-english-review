@@ -16,19 +16,25 @@ The current prototype uses **deterministic authored responses**. A typed questio
 
 ## Review in three minutes
 
-1. Open the English demo. Scroll through the opening scripted walkthrough: all twelve conversations remain readable above, with evidence beside each response and feedback below. Then select **Practice**.
+1. Open the English project page. Read the introduction, then scroll into the demonstration. Use the prominent **English / 한국어** control to change the full edition. The **Practice** action opens the working training tool.
 2. Start a new practice. Open **Example questions**, select an intent, and send its question.
 3. Finish practice and inspect a quoted patient statement alongside its source fact.
 4. Select 1–3 goals and retry the same case version.
 5. Optionally open **Cases** to edit a draft and publish a new local revision.
 
-## Opening guided demonstration
+## Reviewer-oriented project introduction
 
-The landing pages now begin with a **scripted preview of the planned API-powered workflow**, separate from the current practice engine. Twelve student–patient exchanges lead to question-domain coverage derived from recorded question IDs and responses (10 of 12), exact-quote feedback, and two retry goals. A mistaken coffee premise is corrected by the SP; lack of sleep-observation information stays unknown. The two omitted domains remain unasked. No model is called and no practice records are changed.
+English is the default entry. A visible English / 한국어 switch selects the matching introduction, demonstration and practice workbench. It retains known workbench views; in-page demo anchors safely return to the other edition’s project view. Existing language-specific practice records stay in their original stores.
+
+The page explains the purpose and four-step learning loop before the demonstration. After it, exact dialogue examples show the planned patient and separate feedback roles, followed by the proposed 30-scenario evaluation and support request. Overview, Demo and Why Claude anchors are distinct from the actual Practice workspace. Further existing prototype detail is available in an expandable section.
+
+## Guided demonstration
+
+After the project introduction, the landing pages include a **scripted preview of the planned API-powered workflow**, separate from the current practice engine. Twelve student–patient exchanges lead to question-domain coverage derived from recorded question IDs and responses (10 of 12), exact-quote feedback, and two retry goals. A mistaken coffee premise is corrected by the SP; lack of sleep-observation information stays unknown. The two omitted domains remain unasked. No model is called and no practice records are changed.
 
 The experience is controlled by **native page scrolling**, with no autoplay clock, forced scrolling, snap points or wheel/touch interception. Whole student questions, SP replies and adjacent evidence respond to their viewport position. Prior conversation remains fully readable above. Feedback source links return to the exact dialogue pair. Reduced motion, or “Read all without motion,” displays all text without movement. The entrance portrait scrolls out naturally. Student questions now simulate voice transcription: complete grapheme clusters appear with local scroll progress, accompanied by a small input waveform and caret. The full question reserves its final dimensions and remains accessible; SP replies and facts appear only once the question is complete. This is a scripted input example, with no microphone permission, recording, speech service or audio.
 
-Software verification: **153 tests passed** (67 original Korean, 66 English, 20 guided-demo checks). These checks cover software behavior; they are not live-model or clinical validation.
+Software verification: **160 tests passed** (67 original Korean, 66 English, 20 guided-demo checks, 7 front/language/navigation checks). These checks cover software behavior; they are not live-model or clinical validation.
 
 ## Planned Claude integration
 
@@ -50,7 +56,7 @@ The root `index.html` opens `en/index.html`. All product links and assets are re
 
 Requires Node.js with the built-in test runner (verified with Node.js v24.19.0):
 
-    node --test software-tests/tests/*.test.mjs english-tests/*.test.mjs guided-tests/*.test.mjs
+    node --test software-tests/tests/*.test.mjs english-tests/*.test.mjs guided-tests/*.test.mjs front-tests/*.test.mjs
 
 Tests cover software behavior and translation invariants. They do not establish clinical validity, educational effectiveness, user traction, or live-model performance.
 
@@ -60,4 +66,4 @@ For clinical education only, not patient care or clinical decision-making. All i
 
 ## Included materials
 
-`site/` contains the Korean product source and assets. `en/` contains the English review adaptation. `software-tests/` contains the original regression suite; `english-tests/` checks the adaptation; `guided-tests/` checks the demonstration. `guided-demo/` contains the isolated shared renderer, styling and assets. `design/` contains the approved visual references and an accurate production-asset usage note. The font license notice is retained in each edition's `assets/FONT-LICENSE.txt`. No open-source license is assigned to the original project by this review bundle.
+`site/` contains the Korean product source and assets. `en/` contains the English review adaptation. `software-tests/` contains the original regression suite; `english-tests/` checks the adaptation; `guided-tests/` checks the demonstration. `guided-demo/` contains the unchanged isolated scroll demonstration. `project-front/` contains the bilingual project copy, intro renderer, language helpers, styling and locally embedded assets. `front-tests/` verifies the new introduction and navigation. `design/` contains the approved visual references and an accurate production-asset usage note. The font license notice is retained in each edition's `assets/FONT-LICENSE.txt`. No open-source license is assigned to the original project by this review bundle.
