@@ -12,7 +12,7 @@ export function renderProject(main,{example,counts,navigate,openExample,illustra
  const c=example,i=c.intents[0];
  const page=node('div','project-page'),legacy=node('div','front-legacy'),more=node('details','front-technical');
  more.append(node('summary',null,'Explore the working prototype in detail'),legacy);
- page.append(renderIntroduction(frontCopy,{navigate}),renderDemoIntroduction(frontCopy),renderGuidedDemo(demoData),renderFoundation(frontCopy,{navigate}));
+ page.append(renderIntroduction(frontCopy,{navigate}),renderDemoIntroduction(frontCopy),renderGuidedDemo(demoData,{showIntro:false}),renderFoundation(frontCopy,{navigate}));
  const opening=node('section','project-opening');opening.setAttribute('aria-label','Project introduction');
  const lead=node('div','project-lead');lead.append(p('One case, three connected perspectives','project-kicker'));
  const title=node('h2','project-context-title');['Design a case.','Practice an interview.','Review the evidence.'].forEach(t=>title.append(node('span',null,t)));lead.append(title,p('CPX Practice Lab connects case authoring and conversation records\nwith a review of questions and their supporting evidence.','project-summary'));

@@ -12,7 +12,7 @@ export function renderProject(main,{example,counts,navigate,openExample,illustra
  const c=example,i=c.intents[0];
  const page=node('div','project-page'),legacy=node('div','front-legacy'),more=node('details','front-technical');
  more.append(node('summary',null,'현재 연습 도구 자세히 살펴보기'),legacy);
- page.append(renderIntroduction(frontCopy,{navigate}),renderDemoIntroduction(frontCopy),renderGuidedDemo(demoData),renderFoundation(frontCopy,{navigate}));
+ page.append(renderIntroduction(frontCopy,{navigate}),renderDemoIntroduction(frontCopy),renderGuidedDemo(demoData,{showIntro:false}),renderFoundation(frontCopy,{navigate}));
  const opening=node('section','project-opening');opening.setAttribute('aria-label','프로젝트 소개');
  const lead=node('div','project-lead');lead.append(p('하나의 증례, 서로 이어지는 세 가지 시선','project-kicker'));
  const title=node('h2','project-context-title');['증례를 설계하고,','문진을 연습하고,','근거로 복습합니다.'].forEach(t=>title.append(node('span',null,t)));lead.append(title,p('CPX Practice Lab은 증례 작성부터 대화 기록,\n질문과 근거의 비교까지 잇는 문진 연습 프로젝트입니다.','project-summary'));
