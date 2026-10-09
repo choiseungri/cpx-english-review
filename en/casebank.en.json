@@ -1,0 +1,2923 @@
+{
+  "schema_version": "2.0.0",
+  "content_version": "2026-10-08.2",
+  "product": "CPX Practice Lab",
+  "locale": "en-US",
+  "mode": "bounded_offline_question",
+  "authorship": {
+    "statement": "The people, situations, questions and answers, and checklists in these three cases are original fictional constructions. No real patient records, official examination questions, or scoring sheets were used.",
+    "medical_sources_use": "General symptom descriptions from public institutions were consulted only to check plausibility. Patient cases or question-and-answer content from those sources were not copied."
+  },
+  "status_definitions": {
+    "known": "An affirmative statement or observation known to the fictional patient",
+    "explicit_negative": "A patient statement authored to deny the specified item within the specified period",
+    "patient_unknown": "Information authored as unknown to the patient, rather than information left undefined",
+    "author_unset": "Content absent from the fact list; treated as outside the authored scope, distinct from patient lack of knowledge, normality, or a negative finding",
+    "unasked": "Question-selection state; separate from a fact's known/negative/unknown properties"
+  },
+  "global_boundaries": {
+    "medical_scope": "A fixed question-and-answer exercise covering part of adult history-taking. It does not provide diagnosis, test or treatment recommendations, patient education, urgency assessment, or actual clinical care.",
+    "assessment_scope": "An author-created formative checklist linked to the question-selection record. It does not assign scores, determine passing, or judge competence.",
+    "not_comprehensive": "Each case contains a limited set of questions. It does not claim to cover a complete history, warning signs, or sensitive history.",
+    "sensitive_input": "Users are not asked to enter health information about real patients or themselves.",
+    "not_ai": "This JSON contains fixed-answer data and does not include live model calls.",
+    "content_changes": "When revising after deployment, increase the version and preserve the meaning of fact IDs or issue new IDs."
+  },
+  "cases": [
+    {
+      "case_id": "original-sleep-history-001",
+      "version": "1.1.0",
+      "locale": "en-US",
+      "title": "Daily life and worries of an adult having difficulty falling asleep",
+      "fictional_constructed": true,
+      "profile": {
+        "age": 29,
+        "adult": true,
+        "occupation": "Office worker",
+        "living_context": "Lives alone and commutes by subway on weekdays"
+      },
+      "opening_facts": {
+        "patient_line": "I came in because lately I have trouble falling asleep even after I lie down.",
+        "availability": "Only the profile and opening line are shown at the start. The facts below are revealed when the corresponding question is asked."
+      },
+      "emotional_baseline": {
+        "initial": "Tired and worried about making mistakes at work, but cooperative in conversation.",
+        "when_asked_reveals": [
+          {
+            "intent": "Life changes and worries",
+            "behavior": "Sighs a little and talks about new work responsibilities. Additional facts are limited to the corresponding fact units."
+          },
+          {
+            "intent": "Patient expectations",
+            "behavior": "Wants to explain their situation properly rather than immediately settle on a cause."
+          }
+        ],
+        "constraint": "Emotional expression is not converted into clinical symptoms or assessment scores."
+      },
+      "fact_units": [
+        {
+          "id": "original-sleep-history-001.f01",
+          "topic": "Onset",
+          "statement": "Difficulty falling asleep began 3 weeks ago.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-sleep-history-001.q01"
+          ]
+        },
+        {
+          "id": "original-sleep-history-001.f02",
+          "topic": "Course",
+          "statement": "The degree of difficulty has remained generally similar since onset.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-sleep-history-001.q01"
+          ]
+        },
+        {
+          "id": "original-sleep-history-001.f03",
+          "topic": "Frequency",
+          "statement": "Recently has had difficulty falling asleep about 4 days a week.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-sleep-history-001.q02"
+          ]
+        },
+        {
+          "id": "original-sleep-history-001.f04",
+          "topic": "Time to fall asleep",
+          "statement": "Estimates that on difficult nights, falling asleep takes about 1 hour after lying down.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-sleep-history-001.q02"
+          ]
+        },
+        {
+          "id": "original-sleep-history-001.f05",
+          "topic": "Weekday schedule",
+          "statement": "On weekdays, lies down at 00:00 and gets up at 07:00.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-sleep-history-001.q03"
+          ]
+        },
+        {
+          "id": "original-sleep-history-001.f06",
+          "topic": "Weekend schedule",
+          "statement": "On weekends, lies down at 01:00 and gets up at 09:00.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-sleep-history-001.q03"
+          ]
+        },
+        {
+          "id": "original-sleep-history-001.f07",
+          "topic": "Nighttime waking",
+          "statement": "Sometimes wakes once to use the bathroom, but soon falls asleep again.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-sleep-history-001.q04"
+          ]
+        },
+        {
+          "id": "original-sleep-history-001.f08",
+          "topic": "Early waking",
+          "statement": "During these 3 weeks, has not woken early in the morning and been unable to return to sleep.",
+          "status": "explicit_negative",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-sleep-history-001.q04"
+          ]
+        },
+        {
+          "id": "original-sleep-history-001.f09",
+          "topic": "Impact on daily life",
+          "statement": "Has difficulty concentrating on document work in the afternoon.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-sleep-history-001.q05"
+          ]
+        },
+        {
+          "id": "original-sleep-history-001.f10",
+          "topic": "Drowsiness-related incidents",
+          "statement": "During these 3 weeks, has had no injuries or near misses due to drowsiness.",
+          "status": "explicit_negative",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-sleep-history-001.q05"
+          ]
+        },
+        {
+          "id": "original-sleep-history-001.f11",
+          "topic": "Activities before sleep",
+          "statement": "Looks at work messages or videos in bed for about 30 minutes.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-sleep-history-001.q06"
+          ]
+        },
+        {
+          "id": "original-sleep-history-001.f12",
+          "topic": "Coffee",
+          "statement": "Drinks one cup of coffee each morning and another around 16:00 every day.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-sleep-history-001.q07"
+          ]
+        },
+        {
+          "id": "original-sleep-history-001.f13",
+          "topic": "Life changes",
+          "statement": "Took on new work responsibilities around the time the difficulty falling asleep began.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-sleep-history-001.q08"
+          ]
+        },
+        {
+          "id": "original-sleep-history-001.f14",
+          "topic": "Worries",
+          "statement": "When lying down, thinks about whether there is any work they might overlook the next day.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-sleep-history-001.q08"
+          ]
+        },
+        {
+          "id": "original-sleep-history-001.f15",
+          "topic": "Enjoyment",
+          "statement": "Still enjoys meeting friends and cooking.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-sleep-history-001.q09"
+          ]
+        },
+        {
+          "id": "original-sleep-history-001.f16",
+          "topic": "Sleep aids",
+          "statement": "Has never used medication or sleep aids for sleep.",
+          "status": "explicit_negative",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-sleep-history-001.q10"
+          ]
+        },
+        {
+          "id": "original-sleep-history-001.f17",
+          "topic": "Sleep observations",
+          "statement": "Usually sleeps alone and does not know whether they snore or stop breathing during sleep.",
+          "status": "patient_unknown",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-sleep-history-001.q11"
+          ]
+        },
+        {
+          "id": "original-sleep-history-001.f18",
+          "topic": "Expectations",
+          "statement": "Wants to discuss the background to the difficulty falling asleep and learn what aspects of daily life to consider.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-sleep-history-001.q12"
+          ]
+        }
+      ],
+      "intent_questions": [
+        {
+          "id": "original-sleep-history-001.q01",
+          "intent": "Onset and course",
+          "question": "When did the difficulty falling asleep begin, and how has it changed since then?",
+          "patient_answer": "It started 3 weeks ago. It has been mostly the same from then until now.",
+          "fact_unit_ids": [
+            "original-sleep-history-001.f01",
+            "original-sleep-history-001.f02"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "When did the difficulty falling asleep begin, and how has it changed since then?",
+            "When did you start having trouble falling asleep, and how has it changed afterward?",
+            "Please tell me when you started having trouble falling asleep and how much it has improved or worsened since then."
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-sleep-history-001.f01",
+              "answer_quote": "It started 3 weeks ago.",
+              "support": "authored_quote",
+              "classification": "known"
+            },
+            {
+              "fact_unit_id": "original-sleep-history-001.f02",
+              "answer_quote": "It has been mostly the same from then until now.",
+              "support": "authored_quote",
+              "classification": "known"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-sleep-history-001.f01",
+              "original-sleep-history-001.f02"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-sleep-history-001.q02",
+          "intent": "Frequency and time to fall asleep",
+          "question": "How often does this happen, and how long does it take you to fall asleep?",
+          "patient_answer": "About four days a week. On those nights, I think it takes about an hour after I lie down.",
+          "fact_unit_ids": [
+            "original-sleep-history-001.f03",
+            "original-sleep-history-001.f04"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "How often does this happen, and how long does it take you to fall asleep?",
+            "How often do you have trouble falling asleep, and how long does falling asleep take on those nights?",
+            "About how many days a week do you have trouble falling asleep, and how long does it take after you lie down?"
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-sleep-history-001.f03",
+              "answer_quote": "About four days a week.",
+              "support": "authored_quote",
+              "classification": "known"
+            },
+            {
+              "fact_unit_id": "original-sleep-history-001.f04",
+              "answer_quote": "On those nights, I think it takes about an hour after I lie down.",
+              "support": "authored_quote",
+              "classification": "known"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-sleep-history-001.f03",
+              "original-sleep-history-001.f04"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-sleep-history-001.q03",
+          "intent": "Weekday and weekend schedules",
+          "question": "What time do you lie down and get up on weekdays and weekends?",
+          "patient_answer": "On weekdays, I lie down at midnight and get up at 7 in the morning. On weekends, I lie down at 1 in the morning and get up at 9.",
+          "fact_unit_ids": [
+            "original-sleep-history-001.f05",
+            "original-sleep-history-001.f06"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "What time do you lie down and get up on weekdays and weekends?",
+            "Please tell me your bedtime and getting-up time for weekdays and weekends separately.",
+            "On weekdays, what time do you lie down and get up, and what are those times on weekends?"
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-sleep-history-001.f05",
+              "answer_quote": "On weekdays, I lie down at midnight and get up at 7 in the morning.",
+              "support": "authored_quote",
+              "classification": "known"
+            },
+            {
+              "fact_unit_id": "original-sleep-history-001.f06",
+              "answer_quote": "On weekends, I lie down at 1 in the morning and get up at 9.",
+              "support": "authored_quote",
+              "classification": "known"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-sleep-history-001.f05",
+              "original-sleep-history-001.f06"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-sleep-history-001.q04",
+          "intent": "Nighttime waking and early waking",
+          "question": "Do you wake during the night, or wake too early and find you cannot get back to sleep?",
+          "patient_answer": "Sometimes I wake once to use the bathroom, but I soon fall asleep again. Lately, I have not woken early in the morning and been unable to get back to sleep.",
+          "fact_unit_ids": [
+            "original-sleep-history-001.f07",
+            "original-sleep-history-001.f08"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "Do you wake during the night, or wake too early and find you cannot get back to sleep?",
+            "Do you wake in the middle of the night, and do you wake too early in the morning and have trouble returning to sleep?",
+            "Does your sleep get interrupted during the night? Do you also wake early in the morning and find you cannot fall asleep again?"
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-sleep-history-001.f07",
+              "answer_quote": "Sometimes I wake once to use the bathroom, but I soon fall asleep again.",
+              "support": "authored_quote",
+              "classification": "known"
+            },
+            {
+              "fact_unit_id": "original-sleep-history-001.f08",
+              "answer_quote": "Lately, I have not woken early in the morning and been unable to get back to sleep.",
+              "support": "authored_quote",
+              "classification": "explicit_negative"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-sleep-history-001.f07",
+              "original-sleep-history-001.f08"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-sleep-history-001.q05",
+          "intent": "Daytime impact and drowsiness-related experiences",
+          "question": "How does this affect your daytime life? Have you had any dangerous experiences due to drowsiness?",
+          "patient_answer": "I have trouble concentrating on document work in the afternoon. Lately, I have not been injured or had a near miss because of drowsiness.",
+          "fact_unit_ids": [
+            "original-sleep-history-001.f09",
+            "original-sleep-history-001.f10"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "How does this affect your daytime life? Have you had any dangerous experiences due to drowsiness?",
+            "How have your sleep problems changed your daytime life, and have you had any injuries or dangerous experiences due to drowsiness?",
+            "What difficulties do you have during the day? Have you had an accident or a near miss because you were sleepy?"
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-sleep-history-001.f09",
+              "answer_quote": "I have trouble concentrating on document work in the afternoon.",
+              "support": "authored_quote",
+              "classification": "known"
+            },
+            {
+              "fact_unit_id": "original-sleep-history-001.f10",
+              "answer_quote": "Lately, I have not been injured or had a near miss because of drowsiness.",
+              "support": "authored_quote",
+              "classification": "explicit_negative"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-sleep-history-001.f09",
+              "original-sleep-history-001.f10"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-sleep-history-001.q06",
+          "intent": "Activities before sleep",
+          "question": "What do you usually do after lying down in bed?",
+          "patient_answer": "I look at work messages or videos on my phone in bed for about 30 minutes.",
+          "fact_unit_ids": [
+            "original-sleep-history-001.f11"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "What do you usually do after lying down in bed?",
+            "What do you usually do in bed before falling asleep?",
+            "What do you mainly do between lying down in bed and falling asleep?"
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-sleep-history-001.f11",
+              "answer_quote": "I look at work messages or videos on my phone in bed for about 30 minutes.",
+              "support": "authored_quote",
+              "classification": "known"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-sleep-history-001.f11"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-sleep-history-001.q07",
+          "intent": "Coffee amount and timing",
+          "question": "How much coffee do you drink each day, and when?",
+          "patient_answer": "One cup in the morning and another around 4 in the afternoon.",
+          "fact_unit_ids": [
+            "original-sleep-history-001.f12"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "How much coffee do you drink each day, and when?",
+            "How many cups of coffee do you drink a day, and at what times?",
+            "Please tell me the amount of coffee you drink each day and when you drink it."
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-sleep-history-001.f12",
+              "answer_quote": "One cup in the morning and another around 4 in the afternoon.",
+              "support": "authored_quote",
+              "classification": "known"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-sleep-history-001.f12"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-sleep-history-001.q08",
+          "intent": "Life changes and worries",
+          "question": "Have there been any recent changes in your life, or worries that come to mind when you lie down?",
+          "patient_answer": "I took on new work responsibilities around the time the sleep difficulty began. When I lie down, I start thinking about whether I might overlook something tomorrow.",
+          "fact_unit_ids": [
+            "original-sleep-history-001.f13",
+            "original-sleep-history-001.f14"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "Have there been any recent changes in your life, or worries that come to mind when you lie down?",
+            "Did anything change in your life around the time you started having trouble sleeping? What do you worry about when lying down?",
+            "Please tell me about recent changes in your life and any worries you have when lying down in bed."
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-sleep-history-001.f13",
+              "answer_quote": "I took on new work responsibilities around the time the sleep difficulty began.",
+              "support": "authored_quote",
+              "classification": "known"
+            },
+            {
+              "fact_unit_id": "original-sleep-history-001.f14",
+              "answer_quote": "When I lie down, I start thinking about whether I might overlook something tomorrow.",
+              "support": "authored_quote",
+              "classification": "known"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-sleep-history-001.f13",
+              "original-sleep-history-001.f14"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-sleep-history-001.q09",
+          "intent": "Enjoyment of usual activities",
+          "question": "How do you feel when doing things you usually enjoy?",
+          "patient_answer": "I still enjoy meeting friends and cooking.",
+          "fact_unit_ids": [
+            "original-sleep-history-001.f15"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "How do you feel when doing things you usually enjoy?",
+            "How do you feel these days when doing activities you used to enjoy?",
+            "Please tell me how you feel now when doing things you usually like."
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-sleep-history-001.f15",
+              "answer_quote": "I still enjoy meeting friends and cooking.",
+              "support": "authored_quote",
+              "classification": "known"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-sleep-history-001.f15"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-sleep-history-001.q10",
+          "intent": "Use of sleep aids",
+          "question": "Have you ever used medication or sleep aids for sleep?",
+          "patient_answer": "I have never used medication or sleep aids for sleep.",
+          "fact_unit_ids": [
+            "original-sleep-history-001.f16"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "Have you ever used medication or sleep aids for sleep?",
+            "Have you tried medication or sleep aids to help you sleep?",
+            "Have you used any medication or sleep aids because of sleep problems?"
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-sleep-history-001.f16",
+              "answer_quote": "I have never used medication or sleep aids for sleep.",
+              "support": "authored_quote",
+              "classification": "explicit_negative"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-sleep-history-001.f16"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-sleep-history-001.q11",
+          "intent": "Limits of sleep observation",
+          "question": "Do you know whether you snore or stop breathing while asleep?",
+          "patient_answer": "I sleep alone, so I do not really know whether I snore or stop breathing in my sleep.",
+          "fact_unit_ids": [
+            "original-sleep-history-001.f17"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "Do you know whether you snore or stop breathing while asleep?",
+            "Are you aware of whether you snore or your breathing stops while sleeping?",
+            "Do you personally know whether you have snoring or pauses in breathing during sleep?"
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-sleep-history-001.f17",
+              "answer_quote": "I sleep alone, so I do not really know whether I snore or stop breathing in my sleep.",
+              "support": "authored_quote",
+              "classification": "patient_unknown"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-sleep-history-001.f17"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-sleep-history-001.q12",
+          "intent": "Patient expectations",
+          "question": "What would you most like to talk about today?",
+          "patient_answer": "I want to talk about the background to why it has become hard to fall asleep. I also wonder what aspects of my daily life I should look at.",
+          "fact_unit_ids": [
+            "original-sleep-history-001.f18"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "What would you most like to talk about today?",
+            "What would you most like to discuss in today's consultation?",
+            "What is the main thing you want to talk about during your visit today?"
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-sleep-history-001.f18",
+              "answer_quote": "I want to talk about the background to why it has become hard to fall asleep. I also wonder what aspects of my daily life I should look at.",
+              "support": "authored_quote",
+              "classification": "known"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-sleep-history-001.f18"
+            ],
+            "partial_question_allowed": false
+          }
+        }
+      ],
+      "response_boundary": {
+        "mode": "This offline question-and-answer exercise matches only preset questions and reviewed aliases exactly. Unregistered sentences are routed to system-level question confirmation.",
+        "known_fact_rule": "State only facts contained in authored_fixed_answer. Do not agree with leading questions that conflict with the setup or change facts in response.",
+        "negative_rule": "explicit_negative refers only to a patient's statement about the specified symptom and period; it does not represent objective test results or exclusion of disease.",
+        "unknown_rule": "patient_unknown is information authored as unknown to the patient. Distinguish this from facts not yet asked about and absence of symptoms.",
+        "out_of_scope_rule": "Items not defined in this case are recorded as author-unset, not as actual patient lack of knowledge or negative findings.",
+        "out_of_scope_unknown_answer": "I cannot answer that because this practice case does not define that information.",
+        "diagnosis_or_treatment_answer": "This case provides history-taking practice only, without diagnostic or treatment guidance.",
+        "do_not_invent": [
+          "Test results",
+          "Vital signs",
+          "Physical examination findings",
+          "Diagnosis",
+          "Medication doses or instructions for use",
+          "History not defined in the case",
+          "Urgency assessment"
+        ],
+        "repeat_question_rule": "Display the same answer for questions with the same intent. Do not change facts with elapsed time or emotional changes."
+      },
+      "learner_goal": [
+        "Clarify onset, frequency, schedule, and impact on daily life in the patient's own words.",
+        "Check the temporal relationship between life changes and worries without asserting a cause.",
+        "Do not convert an answer indicating lack of sleep observations into an absence of snoring or breathing pauses."
+      ],
+      "formative_checklist": {
+        "kind": "author_created_question_coverage",
+        "validated": false,
+        "official_exam_alignment": false,
+        "score": null,
+        "passing_threshold": null,
+        "explanation": "This is a record of selected questions and displayed answers. It does not assess question order, quality of empathy, actual understanding, clinical judgment, or examination competence.",
+        "items": [
+          {
+            "id": "original-sleep-history-001.check01",
+            "label": "Onset and course",
+            "evidence_question_ids": [
+              "original-sleep-history-001.q01"
+            ],
+            "fact_unit_ids": [
+              "original-sleep-history-001.f01",
+              "original-sleep-history-001.f02"
+            ],
+            "state_when_selected": "Question and answer reviewed",
+            "state_when_unselected": "Not yet asked"
+          },
+          {
+            "id": "original-sleep-history-001.check02",
+            "label": "Frequency and time to fall asleep",
+            "evidence_question_ids": [
+              "original-sleep-history-001.q02"
+            ],
+            "fact_unit_ids": [
+              "original-sleep-history-001.f03",
+              "original-sleep-history-001.f04"
+            ],
+            "state_when_selected": "Question and answer reviewed",
+            "state_when_unselected": "Not yet asked"
+          },
+          {
+            "id": "original-sleep-history-001.check03",
+            "label": "Weekday and weekend schedules",
+            "evidence_question_ids": [
+              "original-sleep-history-001.q03"
+            ],
+            "fact_unit_ids": [
+              "original-sleep-history-001.f05",
+              "original-sleep-history-001.f06"
+            ],
+            "state_when_selected": "Question and answer reviewed",
+            "state_when_unselected": "Not yet asked"
+          },
+          {
+            "id": "original-sleep-history-001.check04",
+            "label": "Nighttime waking and early waking",
+            "evidence_question_ids": [
+              "original-sleep-history-001.q04"
+            ],
+            "fact_unit_ids": [
+              "original-sleep-history-001.f07",
+              "original-sleep-history-001.f08"
+            ],
+            "state_when_selected": "Question and answer reviewed",
+            "state_when_unselected": "Not yet asked"
+          },
+          {
+            "id": "original-sleep-history-001.check05",
+            "label": "Daytime impact and drowsiness-related experiences",
+            "evidence_question_ids": [
+              "original-sleep-history-001.q05"
+            ],
+            "fact_unit_ids": [
+              "original-sleep-history-001.f09",
+              "original-sleep-history-001.f10"
+            ],
+            "state_when_selected": "Question and answer reviewed",
+            "state_when_unselected": "Not yet asked"
+          },
+          {
+            "id": "original-sleep-history-001.check06",
+            "label": "Activities before sleep",
+            "evidence_question_ids": [
+              "original-sleep-history-001.q06"
+            ],
+            "fact_unit_ids": [
+              "original-sleep-history-001.f11"
+            ],
+            "state_when_selected": "Question and answer reviewed",
+            "state_when_unselected": "Not yet asked"
+          },
+          {
+            "id": "original-sleep-history-001.check07",
+            "label": "Coffee amount and timing",
+            "evidence_question_ids": [
+              "original-sleep-history-001.q07"
+            ],
+            "fact_unit_ids": [
+              "original-sleep-history-001.f12"
+            ],
+            "state_when_selected": "Question and answer reviewed",
+            "state_when_unselected": "Not yet asked"
+          },
+          {
+            "id": "original-sleep-history-001.check08",
+            "label": "Life changes and worries",
+            "evidence_question_ids": [
+              "original-sleep-history-001.q08"
+            ],
+            "fact_unit_ids": [
+              "original-sleep-history-001.f13",
+              "original-sleep-history-001.f14"
+            ],
+            "state_when_selected": "Question and answer reviewed",
+            "state_when_unselected": "Not yet asked"
+          },
+          {
+            "id": "original-sleep-history-001.check09",
+            "label": "Enjoyment of usual activities",
+            "evidence_question_ids": [
+              "original-sleep-history-001.q09"
+            ],
+            "fact_unit_ids": [
+              "original-sleep-history-001.f15"
+            ],
+            "state_when_selected": "Question and answer reviewed",
+            "state_when_unselected": "Not yet asked"
+          },
+          {
+            "id": "original-sleep-history-001.check10",
+            "label": "Use of sleep aids",
+            "evidence_question_ids": [
+              "original-sleep-history-001.q10"
+            ],
+            "fact_unit_ids": [
+              "original-sleep-history-001.f16"
+            ],
+            "state_when_selected": "Question and answer reviewed",
+            "state_when_unselected": "Not yet asked"
+          },
+          {
+            "id": "original-sleep-history-001.check11",
+            "label": "Limits of sleep observation",
+            "evidence_question_ids": [
+              "original-sleep-history-001.q11"
+            ],
+            "fact_unit_ids": [
+              "original-sleep-history-001.f17"
+            ],
+            "state_when_selected": "Question and answer reviewed",
+            "state_when_unselected": "Not yet asked"
+          },
+          {
+            "id": "original-sleep-history-001.check12",
+            "label": "Patient expectations",
+            "evidence_question_ids": [
+              "original-sleep-history-001.q12"
+            ],
+            "fact_unit_ids": [
+              "original-sleep-history-001.f18"
+            ],
+            "state_when_selected": "Question and answer reviewed",
+            "state_when_unselected": "Not yet asked"
+          }
+        ],
+        "caution": "Selecting every item does not establish a complete history, safe clinical care, or a passing examination result."
+      },
+      "clinical_plausibility_review": {
+        "status": "public_primary_institution_reference_only_not_expert_validated",
+        "source": {
+          "title": "NHLBI: Insomnia — Symptoms",
+          "url": "https://www.nhlbi.nih.gov/health/insomnia/symptoms",
+          "accessed": "2026-10-08"
+        },
+        "scope": "Only the combination of symptoms and patient-reported daily-life impact was checked against reference material. Fulfillment of diagnostic criteria, safe management, comprehensive history-taking, and assessment validity were not verified."
+      },
+      "session_contract": {
+        "pin_fields": [
+          "schema_version",
+          "content_version",
+          "case_id",
+          "version"
+        ],
+        "reset_on_case_change": true,
+        "reset_on_version_change": true,
+        "mix_versions": false,
+        "initial_fact_coverage": [],
+        "opening_line_role": "The opening line introduces the presenting concern and is not automatically counted as evidence of checklist completion.",
+        "fact_state_axes": [
+          "author_status",
+          "question_selected",
+          "answer_displayed"
+        ]
+      },
+      "input_matching": {
+        "mode": "exact_alias_whitelist",
+        "normalization": [
+          "Unicode NFKC",
+          "trim leading/trailing whitespace",
+          "collapse consecutive whitespace to one space"
+        ],
+        "aliases_are_author_reviewed": true,
+        "fuzzy_matching": false,
+        "substring_matching": false,
+        "regex_matching": false,
+        "multi_intent_policy": "Multiple fact scopes contained within a single registered question are answered together. Joining different registered questions or producing more than one matching candidate triggers system-level question confirmation without revealing facts.",
+        "unmatched_response": "This question does not exactly match the current preset questions and answers. Please select one of the questions below.",
+        "out_of_scope_response_role": "Display this as practice-system guidance rather than acting it out as a fixed patient line.",
+        "unmatched_route": "intent_confirmation",
+        "unmatched_response_role": "system",
+        "unmatched_revealed_fact_ids": [],
+        "alias_review_scope": "Each alias was manually compared to ensure it retains the full requested scope of the original question. This does not constitute clinical expert validation or validation of semantic understanding."
+      },
+      "input_challenge_fixtures": [
+        {
+          "id": "original-sleep-history-001.reject01",
+          "kind": "partial",
+          "input": "When did it start?",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        },
+        {
+          "id": "original-sleep-history-001.reject02",
+          "kind": "partial",
+          "input": "Do you drink coffee?",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        },
+        {
+          "id": "original-sleep-history-001.reject03",
+          "kind": "partial",
+          "input": "Do you snore?",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        },
+        {
+          "id": "original-sleep-history-001.reject04",
+          "kind": "leading",
+          "input": "You sleep well, right?",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        },
+        {
+          "id": "original-sleep-history-001.reject05",
+          "kind": "leading",
+          "input": "You take sleeping pills every day, right?",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        },
+        {
+          "id": "original-sleep-history-001.reject06",
+          "kind": "ambiguous",
+          "input": "How about that?",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        },
+        {
+          "id": "original-sleep-history-001.reject07",
+          "kind": "out_of_scope",
+          "input": "What were the results of your sleep study?",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        },
+        {
+          "id": "original-sleep-history-001.reject08",
+          "kind": "out_of_scope",
+          "input": "Tell me the diagnosis and medication dose.",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        },
+        {
+          "id": "original-sleep-history-001.reject09",
+          "kind": "partial",
+          "input": "When did the difficulty falling asleep begin, and how has it changed since then",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        },
+        {
+          "id": "original-sleep-history-001.reject10",
+          "kind": "multi_intent",
+          "input": "When did the difficulty falling asleep begin, and how has it changed since then? How much coffee do you drink each day, and when?",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        }
+      ]
+    },
+    {
+      "case_id": "original-urinary-discomfort-001",
+      "version": "1.1.0",
+      "locale": "en-US",
+      "title": "An adult's experience of discomfort during urination",
+      "fictional_constructed": true,
+      "profile": {
+        "age": 34,
+        "adult": true,
+        "gender_description": "Female",
+        "occupation": "Library reading-room staff member",
+        "living_context": "Alternates with a colleague at the information desk during the morning shift"
+      },
+      "opening_facts": {
+        "patient_line": "For the past two days, it has stung when I urinate, and I keep going to the bathroom.",
+        "availability": "Only the profile and opening line are shown at the start. The facts below are revealed when the corresponding question is asked."
+      },
+      "emotional_baseline": {
+        "initial": "Feels a little embarrassed discussing symptoms and gives short answers.",
+        "when_asked_reveals": [
+          {
+            "intent": "Changes in discharge",
+            "behavior": "Shares the authored information when asked respectfully. Answers are not locked or unlocked by empathy scores."
+          },
+          {
+            "intent": "Menstruation and pregnancy status",
+            "behavior": "Looks curious about why the question is being asked but answers with the preset facts."
+          }
+        ],
+        "constraint": "Sensitive history displays only the fictional character's setup and does not request the user's own information."
+      },
+      "fact_units": [
+        {
+          "id": "original-urinary-discomfort-001.f01",
+          "topic": "Onset",
+          "statement": "Stinging during urination began in the morning two days ago.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-urinary-discomfort-001.q01"
+          ]
+        },
+        {
+          "id": "original-urinary-discomfort-001.f02",
+          "topic": "Course",
+          "statement": "The degree of stinging has been similar over the two days.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-urinary-discomfort-001.q01"
+          ]
+        },
+        {
+          "id": "original-urinary-discomfort-001.f03",
+          "topic": "Sensation during urination",
+          "statement": "Feels stinging in the urethral area while urine is passing.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-urinary-discomfort-001.q02"
+          ]
+        },
+        {
+          "id": "original-urinary-discomfort-001.f04",
+          "topic": "Frequency",
+          "statement": "Goes to the bathroom about every hour while awake.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-urinary-discomfort-001.q03"
+          ]
+        },
+        {
+          "id": "original-urinary-discomfort-001.f05",
+          "topic": "Amount",
+          "statement": "Since the discomfort began, the amount of urine passed each time has been less than usual.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-urinary-discomfort-001.q03"
+          ]
+        },
+        {
+          "id": "original-urinary-discomfort-001.f06",
+          "topic": "Lower abdomen",
+          "statement": "Has a mild ache in the middle of the lower abdomen.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-urinary-discomfort-001.q04"
+          ]
+        },
+        {
+          "id": "original-urinary-discomfort-001.f07",
+          "topic": "Feeling feverish",
+          "statement": "Has not felt feverish during these two days.",
+          "status": "explicit_negative",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-urinary-discomfort-001.q05"
+          ]
+        },
+        {
+          "id": "original-urinary-discomfort-001.f08",
+          "topic": "Body temperature",
+          "statement": "Has not measured body temperature during these symptoms and does not know the actual temperature.",
+          "status": "patient_unknown",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-urinary-discomfort-001.q05"
+          ]
+        },
+        {
+          "id": "original-urinary-discomfort-001.f09",
+          "topic": "Flank",
+          "statement": "Has had no flank pain during these two days.",
+          "status": "explicit_negative",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-urinary-discomfort-001.q06"
+          ]
+        },
+        {
+          "id": "original-urinary-discomfort-001.f10",
+          "topic": "Vomiting",
+          "statement": "Has not vomited during these two days.",
+          "status": "explicit_negative",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-urinary-discomfort-001.q06"
+          ]
+        },
+        {
+          "id": "original-urinary-discomfort-001.f11",
+          "topic": "Visible blood in urine",
+          "statement": "Has not noticed visible redness in the urine during these two days.",
+          "status": "explicit_negative",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-urinary-discomfort-001.q07"
+          ]
+        },
+        {
+          "id": "original-urinary-discomfort-001.f12",
+          "topic": "Discharge",
+          "statement": "Has not noticed a change in vaginal discharge during these two days.",
+          "status": "explicit_negative",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-urinary-discomfort-001.q08"
+          ]
+        },
+        {
+          "id": "original-urinary-discomfort-001.f13",
+          "topic": "Menstruation",
+          "statement": "The last menstrual period began about 3 weeks ago.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-urinary-discomfort-001.q09"
+          ]
+        },
+        {
+          "id": "original-urinary-discomfort-001.f14",
+          "topic": "Pregnancy status",
+          "statement": "Has not taken a pregnancy test and does not know whether currently pregnant.",
+          "status": "patient_unknown",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-urinary-discomfort-001.q09"
+          ]
+        },
+        {
+          "id": "original-urinary-discomfort-001.f15",
+          "topic": "Previous experience",
+          "statement": "Has never experienced this kind of stinging during urination before.",
+          "status": "explicit_negative",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-urinary-discomfort-001.q10"
+          ]
+        },
+        {
+          "id": "original-urinary-discomfort-001.f16",
+          "topic": "Medication use",
+          "statement": "Has taken no medication for this discomfort.",
+          "status": "explicit_negative",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-urinary-discomfort-001.q11"
+          ]
+        },
+        {
+          "id": "original-urinary-discomfort-001.f17",
+          "topic": "Impact on daily life",
+          "statement": "Finds it burdensome to leave the information desk frequently to use the bathroom.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-urinary-discomfort-001.q12"
+          ]
+        },
+        {
+          "id": "original-urinary-discomfort-001.f18",
+          "topic": "Worries",
+          "statement": "Worries about having to keep asking a colleague to cover the desk.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-urinary-discomfort-001.q12"
+          ]
+        }
+      ],
+      "intent_questions": [
+        {
+          "id": "original-urinary-discomfort-001.q01",
+          "intent": "Onset and course",
+          "question": "When did the stinging begin, and how has it changed since then?",
+          "patient_answer": "It started in the morning two days ago. The stinging has stayed about the same.",
+          "fact_unit_ids": [
+            "original-urinary-discomfort-001.f01",
+            "original-urinary-discomfort-001.f02"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "When did the stinging begin, and how has it changed since then?",
+            "When did the stinging during urination start, and how has it changed afterward?",
+            "Please tell me when the stinging began and how much it has improved or worsened since then."
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-urinary-discomfort-001.f01",
+              "answer_quote": "It started in the morning two days ago.",
+              "support": "authored_quote",
+              "classification": "known"
+            },
+            {
+              "fact_unit_id": "original-urinary-discomfort-001.f02",
+              "answer_quote": "The stinging has stayed about the same.",
+              "support": "authored_quote",
+              "classification": "known"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-urinary-discomfort-001.f01",
+              "original-urinary-discomfort-001.f02"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-urinary-discomfort-001.q02",
+          "intent": "Location and timing of discomfort",
+          "question": "Where do you feel the discomfort, and when?",
+          "patient_answer": "It stings where the urine comes out, while I am passing urine.",
+          "fact_unit_ids": [
+            "original-urinary-discomfort-001.f03"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "Where do you feel the discomfort, and when?",
+            "Where is the discomfort, and at what moment do you feel it?",
+            "Please tell me where it feels uncomfortable and when that discomfort occurs."
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-urinary-discomfort-001.f03",
+              "answer_quote": "It stings where the urine comes out, while I am passing urine.",
+              "support": "authored_quote",
+              "classification": "known"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-urinary-discomfort-001.f03"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-urinary-discomfort-001.q03",
+          "intent": "Frequency and amount",
+          "question": "How often do you go to the bathroom, and how much urine do you pass each time?",
+          "patient_answer": "About every hour while I am awake. The amount each time is less than usual.",
+          "fact_unit_ids": [
+            "original-urinary-discomfort-001.f04",
+            "original-urinary-discomfort-001.f05"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "How often do you go to the bathroom, and how much urine do you pass each time?",
+            "How often do you urinate, and how much do you pass at a time?",
+            "Please tell me how long you go between bathroom visits and how much urine you pass each time."
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-urinary-discomfort-001.f04",
+              "answer_quote": "About every hour while I am awake.",
+              "support": "authored_quote",
+              "classification": "known"
+            },
+            {
+              "fact_unit_id": "original-urinary-discomfort-001.f05",
+              "answer_quote": "The amount each time is less than usual.",
+              "support": "authored_quote",
+              "classification": "known"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-urinary-discomfort-001.f04",
+              "original-urinary-discomfort-001.f05"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-urinary-discomfort-001.q04",
+          "intent": "Lower abdominal discomfort",
+          "question": "Do you also have any discomfort in your lower abdomen?",
+          "patient_answer": "There is a slight ache in the middle of my lower abdomen.",
+          "fact_unit_ids": [
+            "original-urinary-discomfort-001.f06"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "Do you also have any discomfort in your lower abdomen?",
+            "Is there any area or sensation of discomfort in your lower abdomen?",
+            "What discomfort do you have in your lower abdomen?"
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-urinary-discomfort-001.f06",
+              "answer_quote": "There is a slight ache in the middle of my lower abdomen.",
+              "support": "authored_quote",
+              "classification": "known"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-urinary-discomfort-001.f06"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-urinary-discomfort-001.q05",
+          "intent": "Feeling feverish and checking temperature",
+          "question": "Have you felt feverish? Have you measured your temperature?",
+          "patient_answer": "I have not felt feverish. I have not measured my temperature, so I do not know what it is.",
+          "fact_unit_ids": [
+            "original-urinary-discomfort-001.f07",
+            "original-urinary-discomfort-001.f08"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "Have you felt feverish? Have you measured your temperature?",
+            "Have you felt that your body was hot? Have you also checked with a thermometer?",
+            "Please tell me whether you felt feverish and whether you measured your temperature."
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-urinary-discomfort-001.f07",
+              "answer_quote": "I have not felt feverish.",
+              "support": "authored_quote",
+              "classification": "explicit_negative"
+            },
+            {
+              "fact_unit_id": "original-urinary-discomfort-001.f08",
+              "answer_quote": "I have not measured my temperature, so I do not know what it is.",
+              "support": "authored_quote",
+              "classification": "patient_unknown"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-urinary-discomfort-001.f07",
+              "original-urinary-discomfort-001.f08"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-urinary-discomfort-001.q06",
+          "intent": "Flank pain and vomiting",
+          "question": "Have you had pain in your sides or vomited?",
+          "patient_answer": "My sides have not hurt during these two days. I have not vomited either.",
+          "fact_unit_ids": [
+            "original-urinary-discomfort-001.f09",
+            "original-urinary-discomfort-001.f10"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "Have you had pain in your sides or vomited?",
+            "Have you had flank pain or vomiting while these symptoms have been present?",
+            "Have your sides hurt during this episode? Have you also vomited?"
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-urinary-discomfort-001.f09",
+              "answer_quote": "My sides have not hurt during these two days.",
+              "support": "authored_quote",
+              "classification": "explicit_negative"
+            },
+            {
+              "fact_unit_id": "original-urinary-discomfort-001.f10",
+              "answer_quote": "I have not vomited either.",
+              "support": "authored_quote",
+              "classification": "explicit_negative"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-urinary-discomfort-001.f09",
+              "original-urinary-discomfort-001.f10"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-urinary-discomfort-001.q07",
+          "intent": "Observed urine color",
+          "question": "Have you noticed any visible redness in your urine?",
+          "patient_answer": "My urine has not looked red during this episode.",
+          "fact_unit_ids": [
+            "original-urinary-discomfort-001.f11"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "Have you noticed any visible redness in your urine?",
+            "During this episode, have you seen any redness when you urinate?",
+            "Please tell me whether your urine has ever looked red."
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-urinary-discomfort-001.f11",
+              "answer_quote": "My urine has not looked red during this episode.",
+              "support": "authored_quote",
+              "classification": "explicit_negative"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-urinary-discomfort-001.f11"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-urinary-discomfort-001.q08",
+          "intent": "Changes in discharge",
+          "question": "I would like to check this as well. Have you noticed any changes from your usual vaginal discharge?",
+          "patient_answer": "Since this discomfort began, I have not noticed any change in my vaginal discharge.",
+          "fact_unit_ids": [
+            "original-urinary-discomfort-001.f12"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "I would like to check this as well. Have you noticed any changes from your usual vaginal discharge?",
+            "Has your vaginal discharge changed from usual since these symptoms began?",
+            "May I ask whether you have noticed any change in your vaginal discharge compared with before?"
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-urinary-discomfort-001.f12",
+              "answer_quote": "Since this discomfort began, I have not noticed any change in my vaginal discharge.",
+              "support": "authored_quote",
+              "classification": "explicit_negative"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-urinary-discomfort-001.f12"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-urinary-discomfort-001.q09",
+          "intent": "Menstruation and pregnancy status",
+          "question": "When was your last menstrual period? Do you know whether you are currently pregnant?",
+          "patient_answer": "My last period started about 3 weeks ago. I have not taken a pregnancy test, so I do not know whether I am pregnant now.",
+          "fact_unit_ids": [
+            "original-urinary-discomfort-001.f13",
+            "original-urinary-discomfort-001.f14"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "When was your last menstrual period? Do you know whether you are currently pregnant?",
+            "When did your last period start, and do you know your current pregnancy status?",
+            "Please tell me when your most recent period began and whether you know if you are pregnant now."
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-urinary-discomfort-001.f13",
+              "answer_quote": "My last period started about 3 weeks ago.",
+              "support": "authored_quote",
+              "classification": "known"
+            },
+            {
+              "fact_unit_id": "original-urinary-discomfort-001.f14",
+              "answer_quote": "I have not taken a pregnancy test, so I do not know whether I am pregnant now.",
+              "support": "authored_quote",
+              "classification": "patient_unknown"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-urinary-discomfort-001.f13",
+              "original-urinary-discomfort-001.f14"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-urinary-discomfort-001.q10",
+          "intent": "Previous similar experiences",
+          "question": "Have you ever had this kind of stinging when urinating before?",
+          "patient_answer": "This is the first time I have had this kind of stinging.",
+          "fact_unit_ids": [
+            "original-urinary-discomfort-001.f15"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "Have you ever had this kind of stinging when urinating before?",
+            "Have you had stinging like this while passing urine in the past?",
+            "Have you experienced this stinging during urination before?"
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-urinary-discomfort-001.f15",
+              "answer_quote": "This is the first time I have had this kind of stinging.",
+              "support": "authored_quote",
+              "classification": "explicit_negative"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-urinary-discomfort-001.f15"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-urinary-discomfort-001.q11",
+          "intent": "Medication for current symptoms",
+          "question": "Have you taken any medication for this discomfort?",
+          "patient_answer": "I have not taken any medication for these symptoms.",
+          "fact_unit_ids": [
+            "original-urinary-discomfort-001.f16"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "Have you taken any medication for this discomfort?",
+            "Have you taken any medicine for your current urinary discomfort?",
+            "Have you taken anything to reduce these symptoms?"
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-urinary-discomfort-001.f16",
+              "answer_quote": "I have not taken any medication for these symptoms.",
+              "support": "authored_quote",
+              "classification": "explicit_negative"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-urinary-discomfort-001.f16"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-urinary-discomfort-001.q12",
+          "intent": "Daily-life impact and worries",
+          "question": "What is most uncomfortable and worrying in your daily life?",
+          "patient_answer": "I keep having to leave the information desk to use the bathroom. I worry that I will have to keep asking my colleague to cover for me.",
+          "fact_unit_ids": [
+            "original-urinary-discomfort-001.f17",
+            "original-urinary-discomfort-001.f18"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "What is most uncomfortable and worrying in your daily life?",
+            "What difficulties have these symptoms caused in your daily life, and what are you worried about?",
+            "Please tell me about the difficulties in your daily life and what concerns you most."
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-urinary-discomfort-001.f17",
+              "answer_quote": "I keep having to leave the information desk to use the bathroom.",
+              "support": "authored_quote",
+              "classification": "known"
+            },
+            {
+              "fact_unit_id": "original-urinary-discomfort-001.f18",
+              "answer_quote": "I worry that I will have to keep asking my colleague to cover for me.",
+              "support": "authored_quote",
+              "classification": "known"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-urinary-discomfort-001.f17",
+              "original-urinary-discomfort-001.f18"
+            ],
+            "partial_question_allowed": false
+          }
+        }
+      ],
+      "response_boundary": {
+        "mode": "This offline question-and-answer exercise matches only preset questions and reviewed aliases exactly. Unregistered sentences are routed to system-level question confirmation.",
+        "known_fact_rule": "State only facts contained in authored_fixed_answer. Do not agree with leading questions that conflict with the setup or change facts in response.",
+        "negative_rule": "explicit_negative refers only to a patient's statement about the specified symptom and period; it does not represent objective test results or exclusion of disease.",
+        "unknown_rule": "patient_unknown is information authored as unknown to the patient. Distinguish this from facts not yet asked about and absence of symptoms.",
+        "out_of_scope_rule": "Items not defined in this case are recorded as author-unset, not as actual patient lack of knowledge or negative findings.",
+        "out_of_scope_unknown_answer": "I cannot answer that because this practice case does not define that information.",
+        "diagnosis_or_treatment_answer": "This case provides history-taking practice only, without diagnostic or treatment guidance.",
+        "do_not_invent": [
+          "Test results",
+          "Vital signs",
+          "Physical examination findings",
+          "Diagnosis",
+          "Medication doses or instructions for use",
+          "History not defined in the case",
+          "Urgency assessment"
+        ],
+        "repeat_question_rule": "Display the same answer for questions with the same intent. Do not change facts with elapsed time or emotional changes."
+      },
+      "learner_goal": [
+        "Clarify the sensation during urination, frequency, amount, and associated discomfort.",
+        "Distinguish the statement of not feeling feverish from a measured body temperature.",
+        "Do not convert an answer indicating unknown pregnancy status into no possibility of pregnancy.",
+        "Use a respectful tone when asking sensitive questions and about daily-life impact."
+      ],
+      "formative_checklist": {
+        "kind": "author_created_question_coverage",
+        "validated": false,
+        "official_exam_alignment": false,
+        "score": null,
+        "passing_threshold": null,
+        "explanation": "This is a record of selected questions and displayed answers. It does not assess question order, quality of empathy, actual understanding, clinical judgment, or examination competence.",
+        "items": [
+          {
+            "id": "original-urinary-discomfort-001.check01",
+            "label": "Onset and course",
+            "evidence_question_ids": [
+              "original-urinary-discomfort-001.q01"
+            ],
+            "fact_unit_ids": [
+              "original-urinary-discomfort-001.f01",
+              "original-urinary-discomfort-001.f02"
+            ],
+            "state_when_selected": "Question and answer reviewed",
+            "state_when_unselected": "Not yet asked"
+          },
+          {
+            "id": "original-urinary-discomfort-001.check02",
+            "label": "Location and timing of discomfort",
+            "evidence_question_ids": [
+              "original-urinary-discomfort-001.q02"
+            ],
+            "fact_unit_ids": [
+              "original-urinary-discomfort-001.f03"
+            ],
+            "state_when_selected": "Question and answer reviewed",
+            "state_when_unselected": "Not yet asked"
+          },
+          {
+            "id": "original-urinary-discomfort-001.check03",
+            "label": "Frequency and amount",
+            "evidence_question_ids": [
+              "original-urinary-discomfort-001.q03"
+            ],
+            "fact_unit_ids": [
+              "original-urinary-discomfort-001.f04",
+              "original-urinary-discomfort-001.f05"
+            ],
+            "state_when_selected": "Question and answer reviewed",
+            "state_when_unselected": "Not yet asked"
+          },
+          {
+            "id": "original-urinary-discomfort-001.check04",
+            "label": "Lower abdominal discomfort",
+            "evidence_question_ids": [
+              "original-urinary-discomfort-001.q04"
+            ],
+            "fact_unit_ids": [
+              "original-urinary-discomfort-001.f06"
+            ],
+            "state_when_selected": "Question and answer reviewed",
+            "state_when_unselected": "Not yet asked"
+          },
+          {
+            "id": "original-urinary-discomfort-001.check05",
+            "label": "Feeling feverish and checking temperature",
+            "evidence_question_ids": [
+              "original-urinary-discomfort-001.q05"
+            ],
+            "fact_unit_ids": [
+              "original-urinary-discomfort-001.f07",
+              "original-urinary-discomfort-001.f08"
+            ],
+            "state_when_selected": "Question and answer reviewed",
+            "state_when_unselected": "Not yet asked"
+          },
+          {
+            "id": "original-urinary-discomfort-001.check06",
+            "label": "Flank pain and vomiting",
+            "evidence_question_ids": [
+              "original-urinary-discomfort-001.q06"
+            ],
+            "fact_unit_ids": [
+              "original-urinary-discomfort-001.f09",
+              "original-urinary-discomfort-001.f10"
+            ],
+            "state_when_selected": "Question and answer reviewed",
+            "state_when_unselected": "Not yet asked"
+          },
+          {
+            "id": "original-urinary-discomfort-001.check07",
+            "label": "Observed urine color",
+            "evidence_question_ids": [
+              "original-urinary-discomfort-001.q07"
+            ],
+            "fact_unit_ids": [
+              "original-urinary-discomfort-001.f11"
+            ],
+            "state_when_selected": "Question and answer reviewed",
+            "state_when_unselected": "Not yet asked"
+          },
+          {
+            "id": "original-urinary-discomfort-001.check08",
+            "label": "Changes in discharge",
+            "evidence_question_ids": [
+              "original-urinary-discomfort-001.q08"
+            ],
+            "fact_unit_ids": [
+              "original-urinary-discomfort-001.f12"
+            ],
+            "state_when_selected": "Question and answer reviewed",
+            "state_when_unselected": "Not yet asked"
+          },
+          {
+            "id": "original-urinary-discomfort-001.check09",
+            "label": "Menstruation and pregnancy status",
+            "evidence_question_ids": [
+              "original-urinary-discomfort-001.q09"
+            ],
+            "fact_unit_ids": [
+              "original-urinary-discomfort-001.f13",
+              "original-urinary-discomfort-001.f14"
+            ],
+            "state_when_selected": "Question and answer reviewed",
+            "state_when_unselected": "Not yet asked"
+          },
+          {
+            "id": "original-urinary-discomfort-001.check10",
+            "label": "Previous similar experiences",
+            "evidence_question_ids": [
+              "original-urinary-discomfort-001.q10"
+            ],
+            "fact_unit_ids": [
+              "original-urinary-discomfort-001.f15"
+            ],
+            "state_when_selected": "Question and answer reviewed",
+            "state_when_unselected": "Not yet asked"
+          },
+          {
+            "id": "original-urinary-discomfort-001.check11",
+            "label": "Medication for current symptoms",
+            "evidence_question_ids": [
+              "original-urinary-discomfort-001.q11"
+            ],
+            "fact_unit_ids": [
+              "original-urinary-discomfort-001.f16"
+            ],
+            "state_when_selected": "Question and answer reviewed",
+            "state_when_unselected": "Not yet asked"
+          },
+          {
+            "id": "original-urinary-discomfort-001.check12",
+            "label": "Daily-life impact and worries",
+            "evidence_question_ids": [
+              "original-urinary-discomfort-001.q12"
+            ],
+            "fact_unit_ids": [
+              "original-urinary-discomfort-001.f17",
+              "original-urinary-discomfort-001.f18"
+            ],
+            "state_when_selected": "Question and answer reviewed",
+            "state_when_unselected": "Not yet asked"
+          }
+        ],
+        "caution": "Selecting every item does not establish a complete history, safe clinical care, or a passing examination result."
+      },
+      "clinical_plausibility_review": {
+        "status": "public_primary_institution_reference_only_not_expert_validated",
+        "source": {
+          "title": "NIDDK: Symptoms & Causes of Bladder Infection in Adults",
+          "url": "https://www.niddk.nih.gov/health-information/urologic-diseases/bladder-infection-uti-in-adults/symptoms-causes",
+          "accessed": "2026-10-08"
+        },
+        "scope": "Only the combination of symptoms and patient-reported daily-life impact was checked against reference material. Fulfillment of diagnostic criteria, safe management, comprehensive history-taking, and assessment validity were not verified."
+      },
+      "session_contract": {
+        "pin_fields": [
+          "schema_version",
+          "content_version",
+          "case_id",
+          "version"
+        ],
+        "reset_on_case_change": true,
+        "reset_on_version_change": true,
+        "mix_versions": false,
+        "initial_fact_coverage": [],
+        "opening_line_role": "The opening line introduces the presenting concern and is not automatically counted as evidence of checklist completion.",
+        "fact_state_axes": [
+          "author_status",
+          "question_selected",
+          "answer_displayed"
+        ]
+      },
+      "input_matching": {
+        "mode": "exact_alias_whitelist",
+        "normalization": [
+          "Unicode NFKC",
+          "trim leading/trailing whitespace",
+          "collapse consecutive whitespace to one space"
+        ],
+        "aliases_are_author_reviewed": true,
+        "fuzzy_matching": false,
+        "substring_matching": false,
+        "regex_matching": false,
+        "multi_intent_policy": "Multiple fact scopes contained within a single registered question are answered together. Joining different registered questions or producing more than one matching candidate triggers system-level question confirmation without revealing facts.",
+        "unmatched_response": "This question does not exactly match the current preset questions and answers. Please select one of the questions below.",
+        "out_of_scope_response_role": "Display this as practice-system guidance rather than acting it out as a fixed patient line.",
+        "unmatched_route": "intent_confirmation",
+        "unmatched_response_role": "system",
+        "unmatched_revealed_fact_ids": [],
+        "alias_review_scope": "Each alias was manually compared to ensure it retains the full requested scope of the original question. This does not constitute clinical expert validation or validation of semantic understanding."
+      },
+      "input_challenge_fixtures": [
+        {
+          "id": "original-urinary-discomfort-001.reject01",
+          "kind": "partial",
+          "input": "Do you have a fever?",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        },
+        {
+          "id": "original-urinary-discomfort-001.reject02",
+          "kind": "partial",
+          "input": "When was your last period?",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        },
+        {
+          "id": "original-urinary-discomfort-001.reject03",
+          "kind": "partial",
+          "input": "Do your sides hurt?",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        },
+        {
+          "id": "original-urinary-discomfort-001.reject04",
+          "kind": "leading",
+          "input": "You are not pregnant, right?",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        },
+        {
+          "id": "original-urinary-discomfort-001.reject05",
+          "kind": "leading",
+          "input": "Your temperature was normal, right?",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        },
+        {
+          "id": "original-urinary-discomfort-001.reject06",
+          "kind": "ambiguous",
+          "input": "Anything else?",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        },
+        {
+          "id": "original-urinary-discomfort-001.reject07",
+          "kind": "out_of_scope",
+          "input": "What are the urinalysis values?",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        },
+        {
+          "id": "original-urinary-discomfort-001.reject08",
+          "kind": "out_of_scope",
+          "input": "Which antibiotic should I take?",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        },
+        {
+          "id": "original-urinary-discomfort-001.reject09",
+          "kind": "partial",
+          "input": "Have you noticed any visible redness in your urine",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        },
+        {
+          "id": "original-urinary-discomfort-001.reject10",
+          "kind": "multi_intent",
+          "input": "When did the stinging begin, and how has it changed since then? Have you taken any medication for this discomfort?",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        }
+      ]
+    },
+    {
+      "case_id": "original-episodic-headache-001",
+      "version": "1.1.0",
+      "locale": "en-US",
+      "title": "The impact of recurring headaches on daily life",
+      "fictional_constructed": true,
+      "profile": {
+        "age": 38,
+        "adult": true,
+        "occupation": "Freelance translator",
+        "living_context": "Mainly works on documents at home and attends a book club on weekends"
+      },
+      "opening_facts": {
+        "patient_line": "I came for a consultation because sometimes a headache makes me stop what I am doing.",
+        "availability": "Only the profile and opening line are shown at the start. The facts below are revealed when the corresponding question is asked."
+      },
+      "emotional_baseline": {
+        "initial": "Has no headache at present but worries about one coinciding with a deadline.",
+        "when_asked_reveals": [
+          {
+            "intent": "Daily-life impact and concerns",
+            "behavior": "Expresses disappointment when talking about recently missing a gathering."
+          },
+          {
+            "intent": "Medication used and limits of recall",
+            "behavior": "Recalls not bringing the product and shares only what they remember."
+          }
+        ],
+        "constraint": "Do not assert that scheduling or anxiety causes the headaches or proves a particular disease."
+      },
+      "fact_units": [
+        {
+          "id": "original-episodic-headache-001.f01",
+          "topic": "Onset",
+          "statement": "Similar headaches have recurred for about 6 months.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-episodic-headache-001.q01"
+          ]
+        },
+        {
+          "id": "original-episodic-headache-001.f02",
+          "topic": "Frequency",
+          "statement": "During the last 3 months, headaches have occurred about twice a month.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-episodic-headache-001.q01"
+          ]
+        },
+        {
+          "id": "original-episodic-headache-001.f03",
+          "topic": "Most recent episode",
+          "statement": "The most recent headache was 3 days ago; there is no headache now.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-episodic-headache-001.q02"
+          ]
+        },
+        {
+          "id": "original-episodic-headache-001.f04",
+          "topic": "Duration",
+          "statement": "Once a headache begins, it usually lasts 4 to 6 hours.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-episodic-headache-001.q03"
+          ]
+        },
+        {
+          "id": "original-episodic-headache-001.f05",
+          "topic": "Onset pattern",
+          "statement": "The pain gradually intensifies over about 30 minutes rather than reaching its worst in an instant.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-episodic-headache-001.q04"
+          ]
+        },
+        {
+          "id": "original-episodic-headache-001.f06",
+          "topic": "Location",
+          "statement": "The pain is usually felt at the right temple.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-episodic-headache-001.q05"
+          ]
+        },
+        {
+          "id": "original-episodic-headache-001.f07",
+          "topic": "Character",
+          "statement": "The pain feels like throbbing in time with a pulse.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-episodic-headache-001.q05"
+          ]
+        },
+        {
+          "id": "original-episodic-headache-001.f08",
+          "topic": "Subjective intensity",
+          "statement": "Describes the pain at its worst as about 6 on a scale of 0 to 10.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-episodic-headache-001.q06"
+          ]
+        },
+        {
+          "id": "original-episodic-headache-001.f09",
+          "topic": "Nausea",
+          "statement": "Feels nauseated during a headache.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-episodic-headache-001.q07"
+          ]
+        },
+        {
+          "id": "original-episodic-headache-001.f10",
+          "topic": "Discomfort with light",
+          "statement": "Finds looking at a bright screen uncomfortable during a headache.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-episodic-headache-001.q07"
+          ]
+        },
+        {
+          "id": "original-episodic-headache-001.f11",
+          "topic": "Changes in strength",
+          "statement": "Has never experienced weakness in an arm or leg on one side during a headache.",
+          "status": "explicit_negative",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-episodic-headache-001.q08"
+          ]
+        },
+        {
+          "id": "original-episodic-headache-001.f12",
+          "topic": "Changes in speech",
+          "statement": "Has never been unable to speak or had slurred speech during a headache.",
+          "status": "explicit_negative",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-episodic-headache-001.q08"
+          ]
+        },
+        {
+          "id": "original-episodic-headache-001.f13",
+          "topic": "Feeling feverish",
+          "statement": "Did not feel feverish on the day of the most recent headache.",
+          "status": "explicit_negative",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-episodic-headache-001.q09"
+          ]
+        },
+        {
+          "id": "original-episodic-headache-001.f14",
+          "topic": "Trauma",
+          "statement": "Does not recall a head injury around the time the headaches began.",
+          "status": "explicit_negative",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-episodic-headache-001.q10"
+          ]
+        },
+        {
+          "id": "original-episodic-headache-001.f15",
+          "topic": "Frequency of self-medication",
+          "statement": "During the last 3 months, took a pain reliever available at home once on each day a headache occurred.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-episodic-headache-001.q11"
+          ]
+        },
+        {
+          "id": "original-episodic-headache-001.f16",
+          "topic": "Medication information",
+          "statement": "Cannot recall the product name or ingredients of the pain reliever taken.",
+          "status": "patient_unknown",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-episodic-headache-001.q11"
+          ]
+        },
+        {
+          "id": "original-episodic-headache-001.f17",
+          "topic": "Impact on daily life",
+          "statement": "The headache 3 days ago interrupted translation work and prevented attendance at a planned book-club meeting.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-episodic-headache-001.q12"
+          ]
+        },
+        {
+          "id": "original-episodic-headache-001.f18",
+          "topic": "Concerns",
+          "statement": "Worries that a headache will coincide with a delivery deadline and prevent keeping a commitment.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-episodic-headache-001.q12"
+          ]
+        }
+      ],
+      "intent_questions": [
+        {
+          "id": "original-episodic-headache-001.q01",
+          "intent": "Onset and frequency",
+          "question": "When did these headaches begin, and how often do they occur these days?",
+          "patient_answer": "I have had similar headaches since about 6 months ago. During the last three months, they have happened about twice a month.",
+          "fact_unit_ids": [
+            "original-episodic-headache-001.f01",
+            "original-episodic-headache-001.f02"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "When did these headaches begin, and how often do they occur these days?",
+            "When did a similar headache first occur, and how often has it been happening recently?",
+            "Please tell me when these headaches started and how frequently they occur now."
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-episodic-headache-001.f01",
+              "answer_quote": "I have had similar headaches since about 6 months ago.",
+              "support": "authored_quote",
+              "classification": "known"
+            },
+            {
+              "fact_unit_id": "original-episodic-headache-001.f02",
+              "answer_quote": "During the last three months, they have happened about twice a month.",
+              "support": "authored_quote",
+              "classification": "known"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-episodic-headache-001.f01",
+              "original-episodic-headache-001.f02"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-episodic-headache-001.q02",
+          "intent": "Most recent headache and current state",
+          "question": "When was your most recent headache? Do you have one now?",
+          "patient_answer": "I had one three days ago. My head does not hurt now.",
+          "fact_unit_ids": [
+            "original-episodic-headache-001.f03"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "When was your most recent headache? Do you have one now?",
+            "When did your head last hurt, and are you currently in pain?",
+            "When was your latest headache, and how does your head feel now?"
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-episodic-headache-001.f03",
+              "answer_quote": "I had one three days ago. My head does not hurt now.",
+              "support": "authored_quote",
+              "classification": "known"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-episodic-headache-001.f03"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-episodic-headache-001.q03",
+          "intent": "Duration of an episode",
+          "question": "How long does a headache usually last?",
+          "patient_answer": "Usually about four to six hours.",
+          "fact_unit_ids": [
+            "original-episodic-headache-001.f04"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "How long does a headache usually last?",
+            "When a headache occurs, how many hours does it usually last?",
+            "Once an episode of head pain starts, how long does it generally continue?"
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-episodic-headache-001.f04",
+              "answer_quote": "Usually about four to six hours.",
+              "support": "authored_quote",
+              "classification": "known"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-episodic-headache-001.f04"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-episodic-headache-001.q04",
+          "intent": "How the pain intensifies",
+          "question": "Is the pain severe in an instant from the start, or does it gradually intensify?",
+          "patient_answer": "It does not reach its worst in an instant; it gets stronger over about 30 minutes.",
+          "fact_unit_ids": [
+            "original-episodic-headache-001.f05"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "Is the pain severe in an instant from the start, or does it gradually intensify?",
+            "Does the headache suddenly reach its worst, or does it gradually worsen over time?",
+            "Please tell me whether the pain is severe in an instant at onset or gradually grows stronger."
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-episodic-headache-001.f05",
+              "answer_quote": "It does not reach its worst in an instant; it gets stronger over about 30 minutes.",
+              "support": "authored_quote",
+              "classification": "known"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-episodic-headache-001.f05"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-episodic-headache-001.q05",
+          "intent": "Location and character",
+          "question": "Could you describe where it hurts and what the pain feels like?",
+          "patient_answer": "It is usually my right temple. It feels like throbbing in time with a pulse.",
+          "fact_unit_ids": [
+            "original-episodic-headache-001.f06",
+            "original-episodic-headache-001.f07"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "Could you describe where it hurts and what the pain feels like?",
+            "Which part of your head hurts, and what does the pain feel like?",
+            "Please describe the location and character of your headache."
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-episodic-headache-001.f06",
+              "answer_quote": "It is usually my right temple.",
+              "support": "authored_quote",
+              "classification": "known"
+            },
+            {
+              "fact_unit_id": "original-episodic-headache-001.f07",
+              "answer_quote": "It feels like throbbing in time with a pulse.",
+              "support": "authored_quote",
+              "classification": "known"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-episodic-headache-001.f06",
+              "original-episodic-headache-001.f07"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-episodic-headache-001.q06",
+          "intent": "Subjective pain intensity",
+          "question": "If 0 means no pain and 10 means the worst pain you can imagine, how would you rate it?",
+          "patient_answer": "At its worst, it feels like about a 6 to me.",
+          "fact_unit_ids": [
+            "original-episodic-headache-001.f08"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "If 0 means no pain and 10 means the worst pain you can imagine, how would you rate it?",
+            "With no pain rated 0 and the worst imaginable pain rated 10, what number is it at its worst?",
+            "If 0 is no pain at all and 10 is the greatest pain you can imagine, how would you rate your worst headache?"
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-episodic-headache-001.f08",
+              "answer_quote": "At its worst, it feels like about a 6 to me.",
+              "support": "authored_quote",
+              "classification": "known"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-episodic-headache-001.f08"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-episodic-headache-001.q07",
+          "intent": "Nausea and light",
+          "question": "When your head hurts, do you feel nauseated or find bright screens uncomfortable?",
+          "patient_answer": "I feel nauseated when it hurts. Looking at bright screens is uncomfortable too.",
+          "fact_unit_ids": [
+            "original-episodic-headache-001.f09",
+            "original-episodic-headache-001.f10"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "When your head hurts, do you feel nauseated or find bright screens uncomfortable?",
+            "During a headache, do you have nausea or discomfort when looking at a bright screen?",
+            "Do you feel nauseated while your head hurts? Is looking at a bright screen also uncomfortable?"
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-episodic-headache-001.f09",
+              "answer_quote": "I feel nauseated when it hurts.",
+              "support": "authored_quote",
+              "classification": "known"
+            },
+            {
+              "fact_unit_id": "original-episodic-headache-001.f10",
+              "answer_quote": "Looking at bright screens is uncomfortable too.",
+              "support": "authored_quote",
+              "classification": "known"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-episodic-headache-001.f09",
+              "original-episodic-headache-001.f10"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-episodic-headache-001.q08",
+          "intent": "Changes in strength and speech",
+          "question": "When it hurts, have you had weakness in the limbs on one side or changes in your speech?",
+          "patient_answer": "I have never had weakness in an arm or leg on one side. I have never been unable to speak or had slurred speech either.",
+          "fact_unit_ids": [
+            "original-episodic-headache-001.f11",
+            "original-episodic-headache-001.f12"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "When it hurts, have you had weakness in the limbs on one side or changes in your speech?",
+            "During a headache, have you had weakness in an arm or leg on one side or any changes in speaking?",
+            "When your head hurts, has anything been different from usual in the strength of your limbs on one side or your speech?"
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-episodic-headache-001.f11",
+              "answer_quote": "I have never had weakness in an arm or leg on one side.",
+              "support": "authored_quote",
+              "classification": "explicit_negative"
+            },
+            {
+              "fact_unit_id": "original-episodic-headache-001.f12",
+              "answer_quote": "I have never been unable to speak or had slurred speech either.",
+              "support": "authored_quote",
+              "classification": "explicit_negative"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-episodic-headache-001.f11",
+              "original-episodic-headache-001.f12"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-episodic-headache-001.q09",
+          "intent": "Feeling feverish during the latest headache",
+          "question": "Did you also feel feverish on the day of your most recent headache?",
+          "patient_answer": "I did not feel feverish when my head hurt three days ago.",
+          "fact_unit_ids": [
+            "original-episodic-headache-001.f13"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "Did you also feel feverish on the day of your most recent headache?",
+            "Did your body feel hot on the day your head most recently hurt?",
+            "Did you feel feverish during your latest headache?"
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-episodic-headache-001.f13",
+              "answer_quote": "I did not feel feverish when my head hurt three days ago.",
+              "support": "authored_quote",
+              "classification": "explicit_negative"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-episodic-headache-001.f13"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-episodic-headache-001.q10",
+          "intent": "History of head injury",
+          "question": "Do you remember injuring your head around the time these headaches began?",
+          "patient_answer": "I do not remember injuring my head around that time.",
+          "fact_unit_ids": [
+            "original-episodic-headache-001.f14"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "Do you remember injuring your head around the time these headaches began?",
+            "Do you recall a head injury before or after these headaches started?",
+            "Do you remember a head injury around the onset of the headaches?"
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-episodic-headache-001.f14",
+              "answer_quote": "I do not remember injuring my head around that time.",
+              "support": "authored_quote",
+              "classification": "explicit_negative"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-episodic-headache-001.f14"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-episodic-headache-001.q11",
+          "intent": "Medication used and limits of recall",
+          "question": "Have you taken medication for the headaches? Do you remember what you took and how often?",
+          "patient_answer": "During the last three months, I took a pain reliever I had at home once on each day it hurt. I do not remember the product name or ingredients.",
+          "fact_unit_ids": [
+            "original-episodic-headache-001.f15",
+            "original-episodic-headache-001.f16"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "Have you taken medication for the headaches? Do you remember what you took and how often?",
+            "Did you take medication for the headaches? Do you remember which medicine it was and how often you took it?",
+            "If you took any medicine for your headaches, please tell me what you remember about which medicine and how often you took it."
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-episodic-headache-001.f15",
+              "answer_quote": "During the last three months, I took a pain reliever I had at home once on each day it hurt.",
+              "support": "authored_quote",
+              "classification": "known"
+            },
+            {
+              "fact_unit_id": "original-episodic-headache-001.f16",
+              "answer_quote": "I do not remember the product name or ingredients.",
+              "support": "authored_quote",
+              "classification": "patient_unknown"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-episodic-headache-001.f15",
+              "original-episodic-headache-001.f16"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-episodic-headache-001.q12",
+          "intent": "Daily-life impact and concerns",
+          "question": "How do the headaches affect your life, and what worries you most?",
+          "patient_answer": "Three days ago, I had to stop my translation work and could not go to my book club either. I worry that I will have another headache on a delivery deadline and fail to keep my commitment.",
+          "fact_unit_ids": [
+            "original-episodic-headache-001.f17",
+            "original-episodic-headache-001.f18"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "How do the headaches affect your life, and what worries you most?",
+            "What disruption have the headaches caused in your daily life, and what concerns you?",
+            "Please tell me how the headaches have affected your life and what you are most worried about."
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-episodic-headache-001.f17",
+              "answer_quote": "Three days ago, I had to stop my translation work and could not go to my book club either.",
+              "support": "authored_quote",
+              "classification": "known"
+            },
+            {
+              "fact_unit_id": "original-episodic-headache-001.f18",
+              "answer_quote": "I worry that I will have another headache on a delivery deadline and fail to keep my commitment.",
+              "support": "authored_quote",
+              "classification": "known"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-episodic-headache-001.f17",
+              "original-episodic-headache-001.f18"
+            ],
+            "partial_question_allowed": false
+          }
+        }
+      ],
+      "response_boundary": {
+        "mode": "This offline question-and-answer exercise matches only preset questions and reviewed aliases exactly. Unregistered sentences are routed to system-level question confirmation.",
+        "known_fact_rule": "State only facts contained in authored_fixed_answer. Do not agree with leading questions that conflict with the setup or change facts in response.",
+        "negative_rule": "explicit_negative refers only to a patient's statement about the specified symptom and period; it does not represent objective test results or exclusion of disease.",
+        "unknown_rule": "patient_unknown is information authored as unknown to the patient. Distinguish this from facts not yet asked about and absence of symptoms.",
+        "out_of_scope_rule": "Items not defined in this case are recorded as author-unset, not as actual patient lack of knowledge or negative findings.",
+        "out_of_scope_unknown_answer": "I cannot answer that because this practice case does not define that information.",
+        "diagnosis_or_treatment_answer": "This case provides history-taking practice only, without diagnostic or treatment guidance.",
+        "do_not_invent": [
+          "Test results",
+          "Vital signs",
+          "Physical examination findings",
+          "Diagnosis",
+          "Medication doses or instructions for use",
+          "History not defined in the case",
+          "Urgency assessment"
+        ],
+        "repeat_question_rule": "Display the same answer for questions with the same intent. Do not change facts with elapsed time or emotional changes."
+      },
+      "learner_goal": [
+        "Clarify the timeline by distinguishing the recurring pattern from the most recent headache episode.",
+        "Record pain location, character, subjective intensity, and associated experiences in the patient's own words.",
+        "Do not guess medication information that is not remembered or fill it in with an arbitrary drug name.",
+        "Do not conclude a cause or safety from the absence of a few symptoms alone."
+      ],
+      "formative_checklist": {
+        "kind": "author_created_question_coverage",
+        "validated": false,
+        "official_exam_alignment": false,
+        "score": null,
+        "passing_threshold": null,
+        "explanation": "This is a record of selected questions and displayed answers. It does not assess question order, quality of empathy, actual understanding, clinical judgment, or examination competence.",
+        "items": [
+          {
+            "id": "original-episodic-headache-001.check01",
+            "label": "Onset and frequency",
+            "evidence_question_ids": [
+              "original-episodic-headache-001.q01"
+            ],
+            "fact_unit_ids": [
+              "original-episodic-headache-001.f01",
+              "original-episodic-headache-001.f02"
+            ],
+            "state_when_selected": "Question and answer reviewed",
+            "state_when_unselected": "Not yet asked"
+          },
+          {
+            "id": "original-episodic-headache-001.check02",
+            "label": "Most recent headache and current state",
+            "evidence_question_ids": [
+              "original-episodic-headache-001.q02"
+            ],
+            "fact_unit_ids": [
+              "original-episodic-headache-001.f03"
+            ],
+            "state_when_selected": "Question and answer reviewed",
+            "state_when_unselected": "Not yet asked"
+          },
+          {
+            "id": "original-episodic-headache-001.check03",
+            "label": "Duration of an episode",
+            "evidence_question_ids": [
+              "original-episodic-headache-001.q03"
+            ],
+            "fact_unit_ids": [
+              "original-episodic-headache-001.f04"
+            ],
+            "state_when_selected": "Question and answer reviewed",
+            "state_when_unselected": "Not yet asked"
+          },
+          {
+            "id": "original-episodic-headache-001.check04",
+            "label": "How the pain intensifies",
+            "evidence_question_ids": [
+              "original-episodic-headache-001.q04"
+            ],
+            "fact_unit_ids": [
+              "original-episodic-headache-001.f05"
+            ],
+            "state_when_selected": "Question and answer reviewed",
+            "state_when_unselected": "Not yet asked"
+          },
+          {
+            "id": "original-episodic-headache-001.check05",
+            "label": "Location and character",
+            "evidence_question_ids": [
+              "original-episodic-headache-001.q05"
+            ],
+            "fact_unit_ids": [
+              "original-episodic-headache-001.f06",
+              "original-episodic-headache-001.f07"
+            ],
+            "state_when_selected": "Question and answer reviewed",
+            "state_when_unselected": "Not yet asked"
+          },
+          {
+            "id": "original-episodic-headache-001.check06",
+            "label": "Subjective pain intensity",
+            "evidence_question_ids": [
+              "original-episodic-headache-001.q06"
+            ],
+            "fact_unit_ids": [
+              "original-episodic-headache-001.f08"
+            ],
+            "state_when_selected": "Question and answer reviewed",
+            "state_when_unselected": "Not yet asked"
+          },
+          {
+            "id": "original-episodic-headache-001.check07",
+            "label": "Nausea and light",
+            "evidence_question_ids": [
+              "original-episodic-headache-001.q07"
+            ],
+            "fact_unit_ids": [
+              "original-episodic-headache-001.f09",
+              "original-episodic-headache-001.f10"
+            ],
+            "state_when_selected": "Question and answer reviewed",
+            "state_when_unselected": "Not yet asked"
+          },
+          {
+            "id": "original-episodic-headache-001.check08",
+            "label": "Changes in strength and speech",
+            "evidence_question_ids": [
+              "original-episodic-headache-001.q08"
+            ],
+            "fact_unit_ids": [
+              "original-episodic-headache-001.f11",
+              "original-episodic-headache-001.f12"
+            ],
+            "state_when_selected": "Question and answer reviewed",
+            "state_when_unselected": "Not yet asked"
+          },
+          {
+            "id": "original-episodic-headache-001.check09",
+            "label": "Feeling feverish during the latest headache",
+            "evidence_question_ids": [
+              "original-episodic-headache-001.q09"
+            ],
+            "fact_unit_ids": [
+              "original-episodic-headache-001.f13"
+            ],
+            "state_when_selected": "Question and answer reviewed",
+            "state_when_unselected": "Not yet asked"
+          },
+          {
+            "id": "original-episodic-headache-001.check10",
+            "label": "History of head injury",
+            "evidence_question_ids": [
+              "original-episodic-headache-001.q10"
+            ],
+            "fact_unit_ids": [
+              "original-episodic-headache-001.f14"
+            ],
+            "state_when_selected": "Question and answer reviewed",
+            "state_when_unselected": "Not yet asked"
+          },
+          {
+            "id": "original-episodic-headache-001.check11",
+            "label": "Medication used and limits of recall",
+            "evidence_question_ids": [
+              "original-episodic-headache-001.q11"
+            ],
+            "fact_unit_ids": [
+              "original-episodic-headache-001.f15",
+              "original-episodic-headache-001.f16"
+            ],
+            "state_when_selected": "Question and answer reviewed",
+            "state_when_unselected": "Not yet asked"
+          },
+          {
+            "id": "original-episodic-headache-001.check12",
+            "label": "Daily-life impact and concerns",
+            "evidence_question_ids": [
+              "original-episodic-headache-001.q12"
+            ],
+            "fact_unit_ids": [
+              "original-episodic-headache-001.f17",
+              "original-episodic-headache-001.f18"
+            ],
+            "state_when_selected": "Question and answer reviewed",
+            "state_when_unselected": "Not yet asked"
+          }
+        ],
+        "caution": "Selecting every item does not establish a complete history, safe clinical care, or a passing examination result."
+      },
+      "clinical_plausibility_review": {
+        "status": "public_primary_institution_reference_only_not_expert_validated",
+        "source": {
+          "title": "NINDS: Migraine",
+          "url": "https://www.ninds.nih.gov/Disorders/All-Disorders/Migraine-Information-Page",
+          "accessed": "2026-10-08"
+        },
+        "scope": "Only the combination of symptoms and patient-reported daily-life impact was checked against reference material. Fulfillment of diagnostic criteria, safe management, comprehensive history-taking, and assessment validity were not verified."
+      },
+      "session_contract": {
+        "pin_fields": [
+          "schema_version",
+          "content_version",
+          "case_id",
+          "version"
+        ],
+        "reset_on_case_change": true,
+        "reset_on_version_change": true,
+        "mix_versions": false,
+        "initial_fact_coverage": [],
+        "opening_line_role": "The opening line introduces the presenting concern and is not automatically counted as evidence of checklist completion.",
+        "fact_state_axes": [
+          "author_status",
+          "question_selected",
+          "answer_displayed"
+        ]
+      },
+      "input_matching": {
+        "mode": "exact_alias_whitelist",
+        "normalization": [
+          "Unicode NFKC",
+          "trim leading/trailing whitespace",
+          "collapse consecutive whitespace to one space"
+        ],
+        "aliases_are_author_reviewed": true,
+        "fuzzy_matching": false,
+        "substring_matching": false,
+        "regex_matching": false,
+        "multi_intent_policy": "Multiple fact scopes contained within a single registered question are answered together. Joining different registered questions or producing more than one matching candidate triggers system-level question confirmation without revealing facts.",
+        "unmatched_response": "This question does not exactly match the current preset questions and answers. Please select one of the questions below.",
+        "out_of_scope_response_role": "Display this as practice-system guidance rather than acting it out as a fixed patient line.",
+        "unmatched_route": "intent_confirmation",
+        "unmatched_response_role": "system",
+        "unmatched_revealed_fact_ids": [],
+        "alias_review_scope": "Each alias was manually compared to ensure it retains the full requested scope of the original question. This does not constitute clinical expert validation or validation of semantic understanding."
+      },
+      "input_challenge_fixtures": [
+        {
+          "id": "original-episodic-headache-001.reject01",
+          "kind": "partial",
+          "input": "When did it hurt?",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        },
+        {
+          "id": "original-episodic-headache-001.reject02",
+          "kind": "partial",
+          "input": "Did you take medication?",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        },
+        {
+          "id": "original-episodic-headache-001.reject03",
+          "kind": "partial",
+          "input": "Do you feel nauseated?",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        },
+        {
+          "id": "original-episodic-headache-001.reject04",
+          "kind": "leading",
+          "input": "You took Tylenol, right?",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        },
+        {
+          "id": "original-episodic-headache-001.reject05",
+          "kind": "leading",
+          "input": "Your brain tests were normal, right?",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        },
+        {
+          "id": "original-episodic-headache-001.reject06",
+          "kind": "ambiguous",
+          "input": "What about then?",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        },
+        {
+          "id": "original-episodic-headache-001.reject07",
+          "kind": "out_of_scope",
+          "input": "Tell me the brain MRI results.",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        },
+        {
+          "id": "original-episodic-headache-001.reject08",
+          "kind": "out_of_scope",
+          "input": "Should I go to the emergency department?",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        },
+        {
+          "id": "original-episodic-headache-001.reject09",
+          "kind": "partial",
+          "input": "How long does a headache usually last",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        },
+        {
+          "id": "original-episodic-headache-001.reject10",
+          "kind": "multi_intent",
+          "input": "When was your most recent headache? Do you have one now? How long does a headache usually last?",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        }
+      ]
+    }
+  ]
+}

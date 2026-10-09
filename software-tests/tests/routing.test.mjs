@@ -1,0 +1,11 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {viewFromHash,hashForView,VIEWS} from '../../site/routing.mjs';
+import {adaptCaseBank} from '../../site/adapter.mjs';
+const root=new URL('../../site/',import.meta.url);
+test('fresh visit and unknown hash safely open project',()=>{for(const x of ['', '#', '#unknown','#main'])assert.equal(viewFromHash(x),'project')});
+test('all five views support direct hash reload and round trips',()=>{for(const v of VIEWS){assert.equal(viewFromHash('#'+v),v);assert.equal(viewFromHash(hashForView(v)),v)}});
+test('route normalization cannot select arbitrary object properties',()=>{assert.equal(viewFromHash('#constructor'),'project');assert.equal(hashForView('toString'),'#project')});
+test('project example uses original actual sleep question and its two quoted facts',()=>{const cases=adaptCaseBank(JSON.parse(fs.readFileSync(new URL('casebank.ko.json',root))));assert.equal(cases[0].id,'original-sleep-history-001');const q=cases[0].intents[0];assert.ok(q.expressions[0].startsWith('언제부터'));assert.equal(q.response.evidence.length,2);for(const e of q.response.evidence)assert.ok(q.response.text.includes(e.quote));const presentation=fs.readFileSync(new URL('presentation.mjs',root),'utf8');assert.ok(!presentation.includes('평소보다 금방 피곤'));assert.ok(presentation.includes('example'));assert.ok(!presentation.includes('innerHTML'))});
+test('HTML exposes project and every existing work view',()=>{const html=fs.readFileSync(new URL('index.html',root),'utf8');for(const view of VIEWS)assert.ok(html.includes('data-nav="'+view+'"'));assert.ok(html.includes('href="#project"'))});

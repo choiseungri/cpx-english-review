@@ -1,0 +1,2923 @@
+{
+  "schema_version": "2.0.0",
+  "content_version": "2026-10-08.2",
+  "product": "CPX Practice Lab",
+  "locale": "ko-KR",
+  "mode": "bounded_offline_question",
+  "authorship": {
+    "statement": "이 세 증례의 인물, 상황, 문답과 체크리스트는 자체 작성한 가상 구성입니다. 실제 환자 기록, 공식 시험 문항 또는 채점표를 사용하지 않았습니다.",
+    "medical_sources_use": "공개 기관의 일반 증상 설명을 개연성 점검에만 참고했습니다. 출처의 환자 사례나 문답을 복제하지 않았습니다."
+  },
+  "status_definitions": {
+    "known": "가상 환자가 알고 있는 긍정적 진술 또는 관찰",
+    "explicit_negative": "명시된 항목·기간에 대해 없다고 답하도록 설정된 환자 진술",
+    "patient_unknown": "정보가 미정인 것이 아니라 환자가 모른다고 답하도록 설정한 정보",
+    "author_unset": "사실 목록에 없는 내용; 환자 무지·정상·음성과 구분하여 설정 밖으로 처리",
+    "unasked": "질문 선택 상태; 사실의 known/negative/unknown 속성과 별개"
+  },
+  "global_boundaries": {
+    "medical_scope": "성인 문진 일부의 고정 문답 연습입니다. 진단·검사·치료 권고, 환자교육, 응급도 판정 및 실제 진료를 제공하지 않습니다.",
+    "assessment_scope": "질문 선택 기록에 연결된 저자 작성 형성적 체크리스트입니다. 점수·합격·역량 판단을 하지 않습니다.",
+    "not_comprehensive": "각 사례는 제한된 질문 집합입니다. 전체 병력·위험 징후·민감 병력의 완전성을 표방하지 않습니다.",
+    "sensitive_input": "실제 환자나 사용자 자신의 건강 정보를 입력하도록 요청하지 않습니다.",
+    "not_ai": "이 JSON은 고정 답변 데이터이며 실시간 모델 호출을 포함하지 않습니다.",
+    "content_changes": "배포 후 수정 시 version을 올리고 사실 ID 의미를 유지하거나 새 ID를 발급합니다."
+  },
+  "cases": [
+    {
+      "case_id": "original-sleep-history-001",
+      "version": "1.1.0",
+      "locale": "ko-KR",
+      "title": "잠들기 어려운 성인의 생활과 걱정",
+      "fictional_constructed": true,
+      "profile": {
+        "age": 29,
+        "adult": true,
+        "occupation": "사무직 직장인",
+        "living_context": "혼자 거주하며 평일에는 지하철로 출퇴근함"
+      },
+      "opening_facts": {
+        "patient_line": "요즘 누워도 잠이 잘 안 와서 왔어요.",
+        "availability": "프로필과 첫 발화만 시작할 때 공개합니다. 아래 사실은 해당 질문을 했을 때 공개합니다."
+      },
+      "emotional_baseline": {
+        "initial": "피곤하고 업무 실수를 걱정하지만 대화에는 협조적입니다.",
+        "when_asked_reveals": [
+          {
+            "intent": "생활 변화와 걱정",
+            "behavior": "조금 한숨을 쉬고 새 업무 이야기를 합니다. 추가 사실은 해당 사실 단위로 한정합니다."
+          },
+          {
+            "intent": "환자의 기대",
+            "behavior": "당장 원인을 단정하기보다 자신의 상황을 제대로 설명하고 싶어 합니다."
+          }
+        ],
+        "constraint": "감정 표현은 임상 증상이나 평가 점수로 환산하지 않습니다."
+      },
+      "fact_units": [
+        {
+          "id": "original-sleep-history-001.f01",
+          "topic": "시작",
+          "statement": "3주 전부터 잠들기 어려워졌다.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-sleep-history-001.q01"
+          ]
+        },
+        {
+          "id": "original-sleep-history-001.f02",
+          "topic": "경과",
+          "statement": "시작 후 불편한 정도는 대체로 비슷하다.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-sleep-history-001.q01"
+          ]
+        },
+        {
+          "id": "original-sleep-history-001.f03",
+          "topic": "빈도",
+          "statement": "최근에는 일주일에 약 4일 잠들기 어렵다.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-sleep-history-001.q02"
+          ]
+        },
+        {
+          "id": "original-sleep-history-001.f04",
+          "topic": "잠드는 시간",
+          "statement": "불편한 날은 누운 뒤 잠들기까지 약 1시간 걸린다고 추정한다.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-sleep-history-001.q02"
+          ]
+        },
+        {
+          "id": "original-sleep-history-001.f05",
+          "topic": "평일 시간표",
+          "statement": "평일에는 00:00에 눕고 07:00에 일어난다.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-sleep-history-001.q03"
+          ]
+        },
+        {
+          "id": "original-sleep-history-001.f06",
+          "topic": "주말 시간표",
+          "statement": "주말에는 01:00에 눕고 09:00에 일어난다.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-sleep-history-001.q03"
+          ]
+        },
+        {
+          "id": "original-sleep-history-001.f07",
+          "topic": "밤중 각성",
+          "statement": "가끔 화장실 때문에 한 번 깨지만 곧 다시 잠든다.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-sleep-history-001.q04"
+          ]
+        },
+        {
+          "id": "original-sleep-history-001.f08",
+          "topic": "이른 각성",
+          "statement": "이번 3주 동안 이른 새벽에 깨서 다시 못 잔 적은 없다.",
+          "status": "explicit_negative",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-sleep-history-001.q04"
+          ]
+        },
+        {
+          "id": "original-sleep-history-001.f09",
+          "topic": "생활 영향",
+          "statement": "오후에 문서 작업에 집중하기 어렵다.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-sleep-history-001.q05"
+          ]
+        },
+        {
+          "id": "original-sleep-history-001.f10",
+          "topic": "졸음 사고",
+          "statement": "이번 3주 동안 졸음으로 다치거나 아찔했던 경험은 없다.",
+          "status": "explicit_negative",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-sleep-history-001.q05"
+          ]
+        },
+        {
+          "id": "original-sleep-history-001.f11",
+          "topic": "취침 전 활동",
+          "statement": "침대에서 업무 메시지나 영상을 약 30분 본다.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-sleep-history-001.q06"
+          ]
+        },
+        {
+          "id": "original-sleep-history-001.f12",
+          "topic": "커피",
+          "statement": "매일 아침과 16:00 무렵에 커피 한 잔씩 마신다.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-sleep-history-001.q07"
+          ]
+        },
+        {
+          "id": "original-sleep-history-001.f13",
+          "topic": "생활 변화",
+          "statement": "잠들기 어려워지기 시작한 무렵 새 업무를 맡았다.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-sleep-history-001.q08"
+          ]
+        },
+        {
+          "id": "original-sleep-history-001.f14",
+          "topic": "걱정",
+          "statement": "누우면 다음 날 놓칠 업무가 없는지 생각한다.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-sleep-history-001.q08"
+          ]
+        },
+        {
+          "id": "original-sleep-history-001.f15",
+          "topic": "즐거움",
+          "statement": "친구를 만나거나 요리하는 일을 여전히 즐긴다.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-sleep-history-001.q09"
+          ]
+        },
+        {
+          "id": "original-sleep-history-001.f16",
+          "topic": "수면 보조제",
+          "statement": "잠 때문에 약이나 수면 보조제를 사용한 적은 없다.",
+          "status": "explicit_negative",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-sleep-history-001.q10"
+          ]
+        },
+        {
+          "id": "original-sleep-history-001.f17",
+          "topic": "수면 관찰",
+          "statement": "평소 혼자 자며 자신의 코골이나 수면 중 호흡 정지 여부를 모른다.",
+          "status": "patient_unknown",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-sleep-history-001.q11"
+          ]
+        },
+        {
+          "id": "original-sleep-history-001.f18",
+          "topic": "기대",
+          "statement": "잠들기 어려워진 배경을 이야기하고 자신의 생활에서 무엇을 살펴볼지 알고 싶다.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-sleep-history-001.q12"
+          ]
+        }
+      ],
+      "intent_questions": [
+        {
+          "id": "original-sleep-history-001.q01",
+          "intent": "시작과 경과",
+          "question": "언제부터 잠들기 어려워졌고, 그동안 어떻게 달라졌나요?",
+          "patient_answer": "3주 전부터 그랬어요. 그때부터 지금까지 대체로 비슷해요.",
+          "fact_unit_ids": [
+            "original-sleep-history-001.f01",
+            "original-sleep-history-001.f02"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "언제부터 잠들기 어려워졌고, 그동안 어떻게 달라졌나요?",
+            "잠들기 힘든 건 언제 시작됐고 이후 상태는 어떻게 변했나요?",
+            "잠이 잘 안 오기 시작한 시점과 그 후 좋아지거나 나빠진 정도를 알려 주세요."
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-sleep-history-001.f01",
+              "answer_quote": "3주 전부터 그랬어요.",
+              "support": "authored_quote",
+              "classification": "known"
+            },
+            {
+              "fact_unit_id": "original-sleep-history-001.f02",
+              "answer_quote": "그때부터 지금까지 대체로 비슷해요.",
+              "support": "authored_quote",
+              "classification": "known"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-sleep-history-001.f01",
+              "original-sleep-history-001.f02"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-sleep-history-001.q02",
+          "intent": "빈도와 잠드는 시간",
+          "question": "얼마나 자주 그렇고, 잠들 때까지 얼마나 걸리나요?",
+          "patient_answer": "일주일에 나흘쯤 그래요. 그런 날에는 누운 뒤 한 시간 정도 걸리는 것 같아요.",
+          "fact_unit_ids": [
+            "original-sleep-history-001.f03",
+            "original-sleep-history-001.f04"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "얼마나 자주 그렇고, 잠들 때까지 얼마나 걸리나요?",
+            "잠들기 힘든 날은 얼마나 자주 있고 그런 날 잠드는 데 얼마나 걸리세요?",
+            "일주일에 며칠 정도 잠이 안 오고 누운 뒤 잠들기까지 시간은 어느 정도인가요?"
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-sleep-history-001.f03",
+              "answer_quote": "일주일에 나흘쯤 그래요.",
+              "support": "authored_quote",
+              "classification": "known"
+            },
+            {
+              "fact_unit_id": "original-sleep-history-001.f04",
+              "answer_quote": "그런 날에는 누운 뒤 한 시간 정도 걸리는 것 같아요.",
+              "support": "authored_quote",
+              "classification": "known"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-sleep-history-001.f03",
+              "original-sleep-history-001.f04"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-sleep-history-001.q03",
+          "intent": "평일과 주말 시간표",
+          "question": "평일과 주말에 몇 시에 눕고 몇 시에 일어나세요?",
+          "patient_answer": "평일에는 밤 12시에 눕고 아침 7시에 일어나요. 주말에는 새벽 1시에 눕고 오전 9시에 일어나요.",
+          "fact_unit_ids": [
+            "original-sleep-history-001.f05",
+            "original-sleep-history-001.f06"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "평일과 주말에 몇 시에 눕고 몇 시에 일어나세요?",
+            "평일과 주말 각각 잠자리에 눕는 시간과 일어나는 시간을 알려 주세요.",
+            "주중에는 몇 시에 누워서 몇 시에 일어나고 주말에는 각각 몇 시인가요?"
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-sleep-history-001.f05",
+              "answer_quote": "평일에는 밤 12시에 눕고 아침 7시에 일어나요.",
+              "support": "authored_quote",
+              "classification": "known"
+            },
+            {
+              "fact_unit_id": "original-sleep-history-001.f06",
+              "answer_quote": "주말에는 새벽 1시에 눕고 오전 9시에 일어나요.",
+              "support": "authored_quote",
+              "classification": "known"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-sleep-history-001.f05",
+              "original-sleep-history-001.f06"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-sleep-history-001.q04",
+          "intent": "밤중 각성과 이른 기상",
+          "question": "밤중에 깨거나, 너무 일찍 깨서 못 자는 일도 있나요?",
+          "patient_answer": "가끔 화장실 때문에 한 번 깨도 곧 다시 잠들어요. 요즘 새벽에 일찍 깨서 못 잔 적은 없어요.",
+          "fact_unit_ids": [
+            "original-sleep-history-001.f07",
+            "original-sleep-history-001.f08"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "밤중에 깨거나, 너무 일찍 깨서 못 자는 일도 있나요?",
+            "자다가 중간에 깨는 일과 새벽에 너무 일찍 깬 뒤 다시 못 자는 일이 있나요?",
+            "밤중에 잠이 깨기도 하나요? 이른 새벽에 깨어 다시 잠들지 못하는 경우도 있나요?"
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-sleep-history-001.f07",
+              "answer_quote": "가끔 화장실 때문에 한 번 깨도 곧 다시 잠들어요.",
+              "support": "authored_quote",
+              "classification": "known"
+            },
+            {
+              "fact_unit_id": "original-sleep-history-001.f08",
+              "answer_quote": "요즘 새벽에 일찍 깨서 못 잔 적은 없어요.",
+              "support": "authored_quote",
+              "classification": "explicit_negative"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-sleep-history-001.f07",
+              "original-sleep-history-001.f08"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-sleep-history-001.q05",
+          "intent": "일상 영향과 졸음 경험",
+          "question": "낮 생활에는 어떤 영향이 있나요? 졸음 때문에 위험했던 적도 있나요?",
+          "patient_answer": "오후에 문서 작업에 집중하기 어려워요. 요즘 졸아서 다치거나 아찔했던 적은 없어요.",
+          "fact_unit_ids": [
+            "original-sleep-history-001.f09",
+            "original-sleep-history-001.f10"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "낮 생활에는 어떤 영향이 있나요? 졸음 때문에 위험했던 적도 있나요?",
+            "잠 문제로 낮 생활이 어떻게 달라졌고 졸음 때문에 다치거나 위험했던 일은 있나요?",
+            "낮에 생활하는 데 어떤 불편이 있나요? 졸려서 사고가 나거나 아찔했던 경험도 있나요?"
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-sleep-history-001.f09",
+              "answer_quote": "오후에 문서 작업에 집중하기 어려워요.",
+              "support": "authored_quote",
+              "classification": "known"
+            },
+            {
+              "fact_unit_id": "original-sleep-history-001.f10",
+              "answer_quote": "요즘 졸아서 다치거나 아찔했던 적은 없어요.",
+              "support": "authored_quote",
+              "classification": "explicit_negative"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-sleep-history-001.f09",
+              "original-sleep-history-001.f10"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-sleep-history-001.q06",
+          "intent": "취침 전 활동",
+          "question": "잠자리에 누운 뒤에는 주로 무엇을 하세요?",
+          "patient_answer": "침대에서 휴대폰으로 업무 메시지나 영상을 30분쯤 봐요.",
+          "fact_unit_ids": [
+            "original-sleep-history-001.f11"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "잠자리에 누운 뒤에는 주로 무엇을 하세요?",
+            "침대에 누워 잠들기 전에는 보통 어떤 일을 하세요?",
+            "잠자리에 누운 다음 잠들기 전까지 주로 무엇을 하시나요?"
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-sleep-history-001.f11",
+              "answer_quote": "침대에서 휴대폰으로 업무 메시지나 영상을 30분쯤 봐요.",
+              "support": "authored_quote",
+              "classification": "known"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-sleep-history-001.f11"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-sleep-history-001.q07",
+          "intent": "커피의 양과 시간",
+          "question": "커피는 하루에 얼마나, 언제 드세요?",
+          "patient_answer": "아침에 한 잔, 오후 4시쯤 한 잔 마셔요.",
+          "fact_unit_ids": [
+            "original-sleep-history-001.f12"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "커피는 하루에 얼마나, 언제 드세요?",
+            "하루에 커피를 몇 잔 마시고 어느 시간대에 드시나요?",
+            "커피를 마시는 하루 양과 시간을 알려 주세요."
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-sleep-history-001.f12",
+              "answer_quote": "아침에 한 잔, 오후 4시쯤 한 잔 마셔요.",
+              "support": "authored_quote",
+              "classification": "known"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-sleep-history-001.f12"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-sleep-history-001.q08",
+          "intent": "생활 변화와 걱정",
+          "question": "최근 달라진 일이나, 누웠을 때 떠오르는 걱정이 있나요?",
+          "patient_answer": "잠이 어려워질 무렵 새 업무를 맡았어요. 누우면 내일 놓칠 일이 없는지 생각하게 돼요.",
+          "fact_unit_ids": [
+            "original-sleep-history-001.f13",
+            "original-sleep-history-001.f14"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "최근 달라진 일이나, 누웠을 때 떠오르는 걱정이 있나요?",
+            "잠이 안 오기 시작할 무렵 생활에 변화가 있었나요? 누워 있을 때 어떤 걱정을 하세요?",
+            "최근 생활에서 달라진 점과 잠자리에 누웠을 때 드는 걱정을 말씀해 주세요."
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-sleep-history-001.f13",
+              "answer_quote": "잠이 어려워질 무렵 새 업무를 맡았어요.",
+              "support": "authored_quote",
+              "classification": "known"
+            },
+            {
+              "fact_unit_id": "original-sleep-history-001.f14",
+              "answer_quote": "누우면 내일 놓칠 일이 없는지 생각하게 돼요.",
+              "support": "authored_quote",
+              "classification": "known"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-sleep-history-001.f13",
+              "original-sleep-history-001.f14"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-sleep-history-001.q09",
+          "intent": "평소 활동의 즐거움",
+          "question": "평소 좋아하던 일을 할 때 느낌은 어떤가요?",
+          "patient_answer": "친구를 만나거나 요리하는 건 지금도 즐거워요.",
+          "fact_unit_ids": [
+            "original-sleep-history-001.f15"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "평소 좋아하던 일을 할 때 느낌은 어떤가요?",
+            "원래 즐기던 활동을 하면 요즘은 기분이 어떠세요?",
+            "평소 좋아하는 일을 할 때 지금도 어떤 느낌이 드는지 알려 주세요."
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-sleep-history-001.f15",
+              "answer_quote": "친구를 만나거나 요리하는 건 지금도 즐거워요.",
+              "support": "authored_quote",
+              "classification": "known"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-sleep-history-001.f15"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-sleep-history-001.q10",
+          "intent": "수면 보조제 사용",
+          "question": "잠 때문에 약이나 수면 보조제를 사용해 본 적이 있나요?",
+          "patient_answer": "잠 때문에 약이나 수면 보조제를 써 본 적은 없어요.",
+          "fact_unit_ids": [
+            "original-sleep-history-001.f16"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "잠 때문에 약이나 수면 보조제를 사용해 본 적이 있나요?",
+            "잠을 자려고 약이나 수면 보조제를 써 보신 적 있나요?",
+            "수면 문제 때문에 약 또는 수면 보조제를 사용한 경험이 있나요?"
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-sleep-history-001.f16",
+              "answer_quote": "잠 때문에 약이나 수면 보조제를 써 본 적은 없어요.",
+              "support": "authored_quote",
+              "classification": "explicit_negative"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-sleep-history-001.f16"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-sleep-history-001.q11",
+          "intent": "수면 관찰의 한계",
+          "question": "코를 골거나 자다가 숨이 멎는지 알고 계세요?",
+          "patient_answer": "혼자 자서 제가 코를 고는지, 자다가 숨이 멎는지는 잘 모르겠어요.",
+          "fact_unit_ids": [
+            "original-sleep-history-001.f17"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "코를 골거나 자다가 숨이 멎는지 알고 계세요?",
+            "주무실 때 코를 고는지 또는 숨이 멈추는지 알고 계신가요?",
+            "자는 동안 코골이나 호흡이 멎는 일이 있는지 본인이 아시나요?"
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-sleep-history-001.f17",
+              "answer_quote": "혼자 자서 제가 코를 고는지, 자다가 숨이 멎는지는 잘 모르겠어요.",
+              "support": "authored_quote",
+              "classification": "patient_unknown"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-sleep-history-001.f17"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-sleep-history-001.q12",
+          "intent": "환자의 기대",
+          "question": "오늘 어떤 점을 가장 이야기하고 싶으세요?",
+          "patient_answer": "왜 잠들기 어려워졌는지 배경을 이야기하고 싶어요. 제 생활에서 어떤 점을 살펴봐야 하는지도 궁금해요.",
+          "fact_unit_ids": [
+            "original-sleep-history-001.f18"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "오늘 어떤 점을 가장 이야기하고 싶으세요?",
+            "오늘 상담에서 어떤 이야기를 가장 나누고 싶으신가요?",
+            "오늘 오셔서 가장 말씀하고 싶은 점은 무엇인가요?"
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-sleep-history-001.f18",
+              "answer_quote": "왜 잠들기 어려워졌는지 배경을 이야기하고 싶어요. 제 생활에서 어떤 점을 살펴봐야 하는지도 궁금해요.",
+              "support": "authored_quote",
+              "classification": "known"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-sleep-history-001.f18"
+            ],
+            "partial_question_allowed": false
+          }
+        }
+      ],
+      "response_boundary": {
+        "mode": "정해진 질문과 검토된 별칭만 정확히 연결하는 오프라인 문답입니다. 등록되지 않은 문장은 시스템 질문 확인으로 전환합니다.",
+        "known_fact_rule": "authored_fixed_answer에 있는 사실만 말합니다. 유도 질문이 설정과 충돌해도 동의하거나 사실을 바꾸지 않습니다.",
+        "negative_rule": "explicit_negative는 명시된 증상·기간의 환자 진술만 뜻하며 객관적 검사 결과나 질환 배제를 뜻하지 않습니다.",
+        "unknown_rule": "patient_unknown은 환자가 모르는 것으로 설정된 정보입니다. 묻지 않은 사실과 증상 부재를 구분합니다.",
+        "out_of_scope_rule": "이 사례에 설정하지 않은 항목은 저자 미설정으로 기록하며 환자의 실제 무지나 음성 소견으로 저장하지 않습니다.",
+        "out_of_scope_unknown_answer": "그 부분은 이 연습 사례에 정보가 설정되어 있지 않아 답할 수 없어요.",
+        "diagnosis_or_treatment_answer": "이 사례는 문진 연습만 제공하며 진단이나 치료 안내는 제공하지 않아요.",
+        "do_not_invent": [
+          "검사 결과",
+          "활력징후",
+          "진찰 소견",
+          "진단",
+          "약 용량 또는 복용 지시",
+          "설정되지 않은 병력",
+          "응급도 판정"
+        ],
+        "repeat_question_rule": "같은 의도 질문에는 같은 답변을 표시합니다. 시간 경과나 감정 변화로 사실을 변경하지 않습니다."
+      },
+      "learner_goal": [
+        "시작·빈도·시간표·생활 영향을 환자 언어로 구체화합니다.",
+        "생활 변화와 걱정의 시간적 연관을 확인하되 원인으로 단정하지 않습니다.",
+        "수면 관찰을 모른다는 답을 코골이나 호흡 정지 부재로 바꾸지 않습니다."
+      ],
+      "formative_checklist": {
+        "kind": "author_created_question_coverage",
+        "validated": false,
+        "official_exam_alignment": false,
+        "score": null,
+        "passing_threshold": null,
+        "explanation": "질문 선택과 표시된 답변의 기록입니다. 질문 순서, 공감의 질, 실제 이해, 임상 판단 또는 시험 역량을 평가하지 않습니다.",
+        "items": [
+          {
+            "id": "original-sleep-history-001.check01",
+            "label": "시작과 경과",
+            "evidence_question_ids": [
+              "original-sleep-history-001.q01"
+            ],
+            "fact_unit_ids": [
+              "original-sleep-history-001.f01",
+              "original-sleep-history-001.f02"
+            ],
+            "state_when_selected": "해당 질문과 답변을 확인함",
+            "state_when_unselected": "아직 질문하지 않음"
+          },
+          {
+            "id": "original-sleep-history-001.check02",
+            "label": "빈도와 잠드는 시간",
+            "evidence_question_ids": [
+              "original-sleep-history-001.q02"
+            ],
+            "fact_unit_ids": [
+              "original-sleep-history-001.f03",
+              "original-sleep-history-001.f04"
+            ],
+            "state_when_selected": "해당 질문과 답변을 확인함",
+            "state_when_unselected": "아직 질문하지 않음"
+          },
+          {
+            "id": "original-sleep-history-001.check03",
+            "label": "평일과 주말 시간표",
+            "evidence_question_ids": [
+              "original-sleep-history-001.q03"
+            ],
+            "fact_unit_ids": [
+              "original-sleep-history-001.f05",
+              "original-sleep-history-001.f06"
+            ],
+            "state_when_selected": "해당 질문과 답변을 확인함",
+            "state_when_unselected": "아직 질문하지 않음"
+          },
+          {
+            "id": "original-sleep-history-001.check04",
+            "label": "밤중 각성과 이른 기상",
+            "evidence_question_ids": [
+              "original-sleep-history-001.q04"
+            ],
+            "fact_unit_ids": [
+              "original-sleep-history-001.f07",
+              "original-sleep-history-001.f08"
+            ],
+            "state_when_selected": "해당 질문과 답변을 확인함",
+            "state_when_unselected": "아직 질문하지 않음"
+          },
+          {
+            "id": "original-sleep-history-001.check05",
+            "label": "일상 영향과 졸음 경험",
+            "evidence_question_ids": [
+              "original-sleep-history-001.q05"
+            ],
+            "fact_unit_ids": [
+              "original-sleep-history-001.f09",
+              "original-sleep-history-001.f10"
+            ],
+            "state_when_selected": "해당 질문과 답변을 확인함",
+            "state_when_unselected": "아직 질문하지 않음"
+          },
+          {
+            "id": "original-sleep-history-001.check06",
+            "label": "취침 전 활동",
+            "evidence_question_ids": [
+              "original-sleep-history-001.q06"
+            ],
+            "fact_unit_ids": [
+              "original-sleep-history-001.f11"
+            ],
+            "state_when_selected": "해당 질문과 답변을 확인함",
+            "state_when_unselected": "아직 질문하지 않음"
+          },
+          {
+            "id": "original-sleep-history-001.check07",
+            "label": "커피의 양과 시간",
+            "evidence_question_ids": [
+              "original-sleep-history-001.q07"
+            ],
+            "fact_unit_ids": [
+              "original-sleep-history-001.f12"
+            ],
+            "state_when_selected": "해당 질문과 답변을 확인함",
+            "state_when_unselected": "아직 질문하지 않음"
+          },
+          {
+            "id": "original-sleep-history-001.check08",
+            "label": "생활 변화와 걱정",
+            "evidence_question_ids": [
+              "original-sleep-history-001.q08"
+            ],
+            "fact_unit_ids": [
+              "original-sleep-history-001.f13",
+              "original-sleep-history-001.f14"
+            ],
+            "state_when_selected": "해당 질문과 답변을 확인함",
+            "state_when_unselected": "아직 질문하지 않음"
+          },
+          {
+            "id": "original-sleep-history-001.check09",
+            "label": "평소 활동의 즐거움",
+            "evidence_question_ids": [
+              "original-sleep-history-001.q09"
+            ],
+            "fact_unit_ids": [
+              "original-sleep-history-001.f15"
+            ],
+            "state_when_selected": "해당 질문과 답변을 확인함",
+            "state_when_unselected": "아직 질문하지 않음"
+          },
+          {
+            "id": "original-sleep-history-001.check10",
+            "label": "수면 보조제 사용",
+            "evidence_question_ids": [
+              "original-sleep-history-001.q10"
+            ],
+            "fact_unit_ids": [
+              "original-sleep-history-001.f16"
+            ],
+            "state_when_selected": "해당 질문과 답변을 확인함",
+            "state_when_unselected": "아직 질문하지 않음"
+          },
+          {
+            "id": "original-sleep-history-001.check11",
+            "label": "수면 관찰의 한계",
+            "evidence_question_ids": [
+              "original-sleep-history-001.q11"
+            ],
+            "fact_unit_ids": [
+              "original-sleep-history-001.f17"
+            ],
+            "state_when_selected": "해당 질문과 답변을 확인함",
+            "state_when_unselected": "아직 질문하지 않음"
+          },
+          {
+            "id": "original-sleep-history-001.check12",
+            "label": "환자의 기대",
+            "evidence_question_ids": [
+              "original-sleep-history-001.q12"
+            ],
+            "fact_unit_ids": [
+              "original-sleep-history-001.f18"
+            ],
+            "state_when_selected": "해당 질문과 답변을 확인함",
+            "state_when_unselected": "아직 질문하지 않음"
+          }
+        ],
+        "caution": "모든 항목을 선택해도 완전한 문진, 안전한 진료, 시험 합격을 뜻하지 않습니다."
+      },
+      "clinical_plausibility_review": {
+        "status": "public_primary_institution_reference_only_not_expert_validated",
+        "source": {
+          "title": "NHLBI: Insomnia — Symptoms",
+          "url": "https://www.nhlbi.nih.gov/health/insomnia/symptoms",
+          "accessed": "2026-10-08"
+        },
+        "scope": "증상과 환자가 말하는 일상 영향의 조합만 참고 확인했습니다. 진단 기준 충족, 안전한 처치, 완전한 문진 또는 평가 타당성을 검증하지 않았습니다."
+      },
+      "session_contract": {
+        "pin_fields": [
+          "schema_version",
+          "content_version",
+          "case_id",
+          "version"
+        ],
+        "reset_on_case_change": true,
+        "reset_on_version_change": true,
+        "mix_versions": false,
+        "initial_fact_coverage": [],
+        "opening_line_role": "주호소를 소개하는 첫 발화이며, 질문 체크리스트의 완료 근거로 자동 집계하지 않습니다.",
+        "fact_state_axes": [
+          "author_status",
+          "question_selected",
+          "answer_displayed"
+        ]
+      },
+      "input_matching": {
+        "mode": "exact_alias_whitelist",
+        "normalization": [
+          "Unicode NFKC",
+          "trim leading/trailing whitespace",
+          "collapse consecutive whitespace to one space"
+        ],
+        "aliases_are_author_reviewed": true,
+        "fuzzy_matching": false,
+        "substring_matching": false,
+        "regex_matching": false,
+        "multi_intent_policy": "하나의 등록 질문에 포함된 여러 사실 범위는 함께 답합니다. 서로 다른 등록 질문을 이어 붙이거나 일치 후보가 둘 이상이면 시스템 질문 확인으로 전환하며 사실을 공개하지 않습니다.",
+        "unmatched_response": "이 질문은 현재 정해진 문답과 정확히 연결되지 않아요. 아래 질문 중 하나를 선택해 주세요.",
+        "out_of_scope_response_role": "고정 환자 대사로 연기하지 않고 연습 시스템 안내로 표시합니다.",
+        "unmatched_route": "intent_confirmation",
+        "unmatched_response_role": "system",
+        "unmatched_revealed_fact_ids": [],
+        "alias_review_scope": "각 별칭이 원래 질문의 모든 요청 범위를 유지하는지 수동 대조했습니다. 임상 전문가 검증 또는 의미 이해 검증을 뜻하지 않습니다."
+      },
+      "input_challenge_fixtures": [
+        {
+          "id": "original-sleep-history-001.reject01",
+          "kind": "partial",
+          "input": "언제부터예요?",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        },
+        {
+          "id": "original-sleep-history-001.reject02",
+          "kind": "partial",
+          "input": "커피 마셔요?",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        },
+        {
+          "id": "original-sleep-history-001.reject03",
+          "kind": "partial",
+          "input": "코를 고세요?",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        },
+        {
+          "id": "original-sleep-history-001.reject04",
+          "kind": "leading",
+          "input": "잠은 잘 주무시죠?",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        },
+        {
+          "id": "original-sleep-history-001.reject05",
+          "kind": "leading",
+          "input": "수면제를 매일 드시는 거죠?",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        },
+        {
+          "id": "original-sleep-history-001.reject06",
+          "kind": "ambiguous",
+          "input": "그건 어때요?",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        },
+        {
+          "id": "original-sleep-history-001.reject07",
+          "kind": "out_of_scope",
+          "input": "수면검사 결과가 어떻게 나왔나요?",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        },
+        {
+          "id": "original-sleep-history-001.reject08",
+          "kind": "out_of_scope",
+          "input": "진단과 약 용량을 알려 주세요.",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        },
+        {
+          "id": "original-sleep-history-001.reject09",
+          "kind": "partial",
+          "input": "언제부터 잠들기 어려워졌고, 그동안 어떻게 달라졌나요",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        },
+        {
+          "id": "original-sleep-history-001.reject10",
+          "kind": "multi_intent",
+          "input": "언제부터 잠들기 어려워졌고, 그동안 어떻게 달라졌나요? 커피는 하루에 얼마나, 언제 드세요?",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        }
+      ]
+    },
+    {
+      "case_id": "original-urinary-discomfort-001",
+      "version": "1.1.0",
+      "locale": "ko-KR",
+      "title": "소변을 볼 때 불편한 성인의 이야기",
+      "fictional_constructed": true,
+      "profile": {
+        "age": 34,
+        "adult": true,
+        "gender_description": "여성",
+        "occupation": "도서관 자료실 직원",
+        "living_context": "오전 근무 중 안내 데스크를 동료와 번갈아 맡음"
+      },
+      "opening_facts": {
+        "patient_line": "이틀 전부터 소변 볼 때 따갑고 자꾸 화장실에 가요.",
+        "availability": "프로필과 첫 발화만 시작할 때 공개합니다. 아래 사실은 해당 질문을 했을 때 공개합니다."
+      },
+      "emotional_baseline": {
+        "initial": "증상을 말하는 것이 조금 민망해 짧게 답합니다.",
+        "when_asked_reveals": [
+          {
+            "intent": "분비물 변화",
+            "behavior": "존중하는 말투로 질문하면 설정된 내용을 말합니다. 답을 잠그거나 공감 점수로 해제하지 않습니다."
+          },
+          {
+            "intent": "월경과 임신 여부",
+            "behavior": "왜 묻는지 궁금한 표정이지만 정해진 사실을 답합니다."
+          }
+        ],
+        "constraint": "민감한 병력은 사용자 자신의 정보를 요구하지 않고 가상 인물의 설정만 보여 줍니다."
+      },
+      "fact_units": [
+        {
+          "id": "original-urinary-discomfort-001.f01",
+          "topic": "시작",
+          "statement": "배뇨 시 따가움은 이틀 전 아침에 시작했다.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-urinary-discomfort-001.q01"
+          ]
+        },
+        {
+          "id": "original-urinary-discomfort-001.f02",
+          "topic": "경과",
+          "statement": "이틀 동안 따가운 정도는 비슷하다.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-urinary-discomfort-001.q01"
+          ]
+        },
+        {
+          "id": "original-urinary-discomfort-001.f03",
+          "topic": "배뇨 시 느낌",
+          "statement": "소변이 나올 때 요도 부위가 따갑다.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-urinary-discomfort-001.q02"
+          ]
+        },
+        {
+          "id": "original-urinary-discomfort-001.f04",
+          "topic": "빈도",
+          "statement": "깨어 있는 동안 한 시간쯤마다 화장실에 간다.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-urinary-discomfort-001.q03"
+          ]
+        },
+        {
+          "id": "original-urinary-discomfort-001.f05",
+          "topic": "양",
+          "statement": "불편해진 뒤 한 번에 나오는 소변 양은 평소보다 적다.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-urinary-discomfort-001.q03"
+          ]
+        },
+        {
+          "id": "original-urinary-discomfort-001.f06",
+          "topic": "아랫배",
+          "statement": "아랫배 한가운데가 가볍게 뻐근하다.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-urinary-discomfort-001.q04"
+          ]
+        },
+        {
+          "id": "original-urinary-discomfort-001.f07",
+          "topic": "열감",
+          "statement": "이번 이틀 동안 스스로 열이 난다고 느낀 적은 없다.",
+          "status": "explicit_negative",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-urinary-discomfort-001.q05"
+          ]
+        },
+        {
+          "id": "original-urinary-discomfort-001.f08",
+          "topic": "체온",
+          "statement": "이번 증상 중 체온을 재지 않아 실제 체온은 모른다.",
+          "status": "patient_unknown",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-urinary-discomfort-001.q05"
+          ]
+        },
+        {
+          "id": "original-urinary-discomfort-001.f09",
+          "topic": "옆구리",
+          "statement": "이번 이틀 동안 옆구리 통증은 없다.",
+          "status": "explicit_negative",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-urinary-discomfort-001.q06"
+          ]
+        },
+        {
+          "id": "original-urinary-discomfort-001.f10",
+          "topic": "구토",
+          "statement": "이번 이틀 동안 토한 적은 없다.",
+          "status": "explicit_negative",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-urinary-discomfort-001.q06"
+          ]
+        },
+        {
+          "id": "original-urinary-discomfort-001.f11",
+          "topic": "육안 혈뇨",
+          "statement": "이번 이틀 동안 소변에서 눈에 보이는 붉은색은 발견하지 못했다.",
+          "status": "explicit_negative",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-urinary-discomfort-001.q07"
+          ]
+        },
+        {
+          "id": "original-urinary-discomfort-001.f12",
+          "topic": "분비물",
+          "statement": "이번 이틀 동안 질 분비물의 변화는 느끼지 못했다.",
+          "status": "explicit_negative",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-urinary-discomfort-001.q08"
+          ]
+        },
+        {
+          "id": "original-urinary-discomfort-001.f13",
+          "topic": "월경",
+          "statement": "마지막 월경은 약 3주 전에 시작했다.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-urinary-discomfort-001.q09"
+          ]
+        },
+        {
+          "id": "original-urinary-discomfort-001.f14",
+          "topic": "임신 여부",
+          "statement": "임신 검사를 하지 않았으며 현재 임신 여부는 모른다.",
+          "status": "patient_unknown",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-urinary-discomfort-001.q09"
+          ]
+        },
+        {
+          "id": "original-urinary-discomfort-001.f15",
+          "topic": "이전 경험",
+          "statement": "이와 같은 배뇨 시 따가움을 이전에 경험한 적은 없다.",
+          "status": "explicit_negative",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-urinary-discomfort-001.q10"
+          ]
+        },
+        {
+          "id": "original-urinary-discomfort-001.f16",
+          "topic": "복용",
+          "statement": "이번 불편함 때문에 복용한 약은 없다.",
+          "status": "explicit_negative",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-urinary-discomfort-001.q11"
+          ]
+        },
+        {
+          "id": "original-urinary-discomfort-001.f17",
+          "topic": "생활 영향",
+          "statement": "안내 데스크 근무 중 화장실 때문에 자리를 자주 비우는 일이 부담스럽다.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-urinary-discomfort-001.q12"
+          ]
+        },
+        {
+          "id": "original-urinary-discomfort-001.f18",
+          "topic": "걱정",
+          "statement": "동료에게 계속 교대를 부탁해야 할까 봐 걱정한다.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-urinary-discomfort-001.q12"
+          ]
+        }
+      ],
+      "intent_questions": [
+        {
+          "id": "original-urinary-discomfort-001.q01",
+          "intent": "시작과 경과",
+          "question": "따가움은 언제 시작됐고, 그 뒤로 어떻게 달라졌나요?",
+          "patient_answer": "이틀 전 아침부터 그랬어요. 따가운 정도는 계속 비슷해요.",
+          "fact_unit_ids": [
+            "original-urinary-discomfort-001.f01",
+            "original-urinary-discomfort-001.f02"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "따가움은 언제 시작됐고, 그 뒤로 어떻게 달라졌나요?",
+            "소변 볼 때 따가운 증상은 언제부터였고 이후에는 어떻게 변했나요?",
+            "따갑기 시작한 시점과 그 후 좋아지거나 나빠진 정도를 알려 주세요."
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-urinary-discomfort-001.f01",
+              "answer_quote": "이틀 전 아침부터 그랬어요.",
+              "support": "authored_quote",
+              "classification": "known"
+            },
+            {
+              "fact_unit_id": "original-urinary-discomfort-001.f02",
+              "answer_quote": "따가운 정도는 계속 비슷해요.",
+              "support": "authored_quote",
+              "classification": "known"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-urinary-discomfort-001.f01",
+              "original-urinary-discomfort-001.f02"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-urinary-discomfort-001.q02",
+          "intent": "불편한 위치와 순간",
+          "question": "어느 부위가 언제 불편한가요?",
+          "patient_answer": "소변이 나올 때 소변 나오는 쪽이 따가워요.",
+          "fact_unit_ids": [
+            "original-urinary-discomfort-001.f03"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "어느 부위가 언제 불편한가요?",
+            "불편한 느낌이 드는 곳은 어디이며 어느 순간에 느껴지나요?",
+            "어디가 불편한지, 그리고 언제 그 불편함이 생기는지 말씀해 주세요."
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-urinary-discomfort-001.f03",
+              "answer_quote": "소변이 나올 때 소변 나오는 쪽이 따가워요.",
+              "support": "authored_quote",
+              "classification": "known"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-urinary-discomfort-001.f03"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-urinary-discomfort-001.q03",
+          "intent": "횟수와 양",
+          "question": "화장실에 얼마나 자주 가고, 한 번에 나오는 양은 어떤가요?",
+          "patient_answer": "깨어 있을 때는 한 시간쯤마다 가요. 한 번에 나오는 양은 평소보다 적어요.",
+          "fact_unit_ids": [
+            "original-urinary-discomfort-001.f04",
+            "original-urinary-discomfort-001.f05"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "화장실에 얼마나 자주 가고, 한 번에 나오는 양은 어떤가요?",
+            "소변을 보러 얼마나 자주 가시고 한 번 볼 때 양은 어느 정도인가요?",
+            "화장실에 가는 간격과 한 번에 보는 소변 양이 어떤지 알려 주세요."
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-urinary-discomfort-001.f04",
+              "answer_quote": "깨어 있을 때는 한 시간쯤마다 가요.",
+              "support": "authored_quote",
+              "classification": "known"
+            },
+            {
+              "fact_unit_id": "original-urinary-discomfort-001.f05",
+              "answer_quote": "한 번에 나오는 양은 평소보다 적어요.",
+              "support": "authored_quote",
+              "classification": "known"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-urinary-discomfort-001.f04",
+              "original-urinary-discomfort-001.f05"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-urinary-discomfort-001.q04",
+          "intent": "아랫배 불편",
+          "question": "아랫배에도 불편한 느낌이 있나요?",
+          "patient_answer": "아랫배 한가운데가 조금 뻐근해요.",
+          "fact_unit_ids": [
+            "original-urinary-discomfort-001.f06"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "아랫배에도 불편한 느낌이 있나요?",
+            "아랫배에 불편한 곳이나 느낌이 있으세요?",
+            "아랫배 쪽은 어떤 불편감이 있나요?"
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-urinary-discomfort-001.f06",
+              "answer_quote": "아랫배 한가운데가 조금 뻐근해요.",
+              "support": "authored_quote",
+              "classification": "known"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-urinary-discomfort-001.f06"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-urinary-discomfort-001.q05",
+          "intent": "열감과 체온 확인",
+          "question": "열이 난다고 느끼셨나요? 체온을 재 보셨나요?",
+          "patient_answer": "열이 나는 느낌은 없었어요. 체온은 안 재서 몇 도인지는 몰라요.",
+          "fact_unit_ids": [
+            "original-urinary-discomfort-001.f07",
+            "original-urinary-discomfort-001.f08"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "열이 난다고 느끼셨나요? 체온을 재 보셨나요?",
+            "몸에 열이 나는 느낌이 있었나요? 체온계로 재 보기도 하셨나요?",
+            "열감을 느끼셨는지와 체온을 측정하셨는지 알려 주세요."
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-urinary-discomfort-001.f07",
+              "answer_quote": "열이 나는 느낌은 없었어요.",
+              "support": "authored_quote",
+              "classification": "explicit_negative"
+            },
+            {
+              "fact_unit_id": "original-urinary-discomfort-001.f08",
+              "answer_quote": "체온은 안 재서 몇 도인지는 몰라요.",
+              "support": "authored_quote",
+              "classification": "patient_unknown"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-urinary-discomfort-001.f07",
+              "original-urinary-discomfort-001.f08"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-urinary-discomfort-001.q06",
+          "intent": "옆구리 통증과 구토",
+          "question": "옆구리가 아프거나 토한 적은 있나요?",
+          "patient_answer": "이번 이틀 동안 옆구리는 안 아팠어요. 토한 적도 없어요.",
+          "fact_unit_ids": [
+            "original-urinary-discomfort-001.f09",
+            "original-urinary-discomfort-001.f10"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "옆구리가 아프거나 토한 적은 있나요?",
+            "이번 증상이 있는 동안 옆구리 통증이나 구토가 있었나요?",
+            "이번에 옆구리가 아팠던 적이 있나요? 토하기도 하셨나요?"
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-urinary-discomfort-001.f09",
+              "answer_quote": "이번 이틀 동안 옆구리는 안 아팠어요.",
+              "support": "authored_quote",
+              "classification": "explicit_negative"
+            },
+            {
+              "fact_unit_id": "original-urinary-discomfort-001.f10",
+              "answer_quote": "토한 적도 없어요.",
+              "support": "authored_quote",
+              "classification": "explicit_negative"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-urinary-discomfort-001.f09",
+              "original-urinary-discomfort-001.f10"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-urinary-discomfort-001.q07",
+          "intent": "눈으로 본 소변 색",
+          "question": "소변에서 눈에 띄는 붉은색을 본 적이 있나요?",
+          "patient_answer": "이번에는 소변이 붉게 보인 적은 없어요.",
+          "fact_unit_ids": [
+            "original-urinary-discomfort-001.f11"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "소변에서 눈에 띄는 붉은색을 본 적이 있나요?",
+            "이번에 소변을 봤을 때 붉은색이 눈에 보인 적 있나요?",
+            "소변 색이 붉게 보였던 적이 있는지 알려 주세요."
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-urinary-discomfort-001.f11",
+              "answer_quote": "이번에는 소변이 붉게 보인 적은 없어요.",
+              "support": "authored_quote",
+              "classification": "explicit_negative"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-urinary-discomfort-001.f11"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-urinary-discomfort-001.q08",
+          "intent": "분비물 변화",
+          "question": "함께 확인하려고 묻겠습니다. 질 분비물에 평소와 다른 변화가 있나요?",
+          "patient_answer": "이번에 불편해진 뒤로 질 분비물이 달라진 느낌은 없어요.",
+          "fact_unit_ids": [
+            "original-urinary-discomfort-001.f12"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "함께 확인하려고 묻겠습니다. 질 분비물에 평소와 다른 변화가 있나요?",
+            "이번 증상이 생긴 뒤 질 분비물이 평소와 달라졌나요?",
+            "질 분비물에 이전과 다른 변화가 느껴지는지 여쭤봐도 될까요?"
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-urinary-discomfort-001.f12",
+              "answer_quote": "이번에 불편해진 뒤로 질 분비물이 달라진 느낌은 없어요.",
+              "support": "authored_quote",
+              "classification": "explicit_negative"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-urinary-discomfort-001.f12"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-urinary-discomfort-001.q09",
+          "intent": "월경과 임신 여부",
+          "question": "마지막 월경은 언제였나요? 현재 임신 여부를 알고 계신가요?",
+          "patient_answer": "마지막 월경은 3주쯤 전에 시작했어요. 임신 검사는 안 해서 지금 임신인지는 모르겠어요.",
+          "fact_unit_ids": [
+            "original-urinary-discomfort-001.f13",
+            "original-urinary-discomfort-001.f14"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "마지막 월경은 언제였나요? 현재 임신 여부를 알고 계신가요?",
+            "마지막 생리는 언제 시작했으며 현재 임신 여부는 알고 계세요?",
+            "최근 월경을 시작한 시점과 지금 임신인지 알고 계신지 말씀해 주세요."
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-urinary-discomfort-001.f13",
+              "answer_quote": "마지막 월경은 3주쯤 전에 시작했어요.",
+              "support": "authored_quote",
+              "classification": "known"
+            },
+            {
+              "fact_unit_id": "original-urinary-discomfort-001.f14",
+              "answer_quote": "임신 검사는 안 해서 지금 임신인지는 모르겠어요.",
+              "support": "authored_quote",
+              "classification": "patient_unknown"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-urinary-discomfort-001.f13",
+              "original-urinary-discomfort-001.f14"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-urinary-discomfort-001.q10",
+          "intent": "이전의 비슷한 경험",
+          "question": "이전에도 소변 볼 때 이렇게 따가웠던 적이 있나요?",
+          "patient_answer": "이렇게 따가웠던 건 처음이에요.",
+          "fact_unit_ids": [
+            "original-urinary-discomfort-001.f15"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "이전에도 소변 볼 때 이렇게 따가웠던 적이 있나요?",
+            "과거에도 소변이 나올 때 지금처럼 따가운 적이 있었나요?",
+            "이런 배뇨 시 따가움을 전에도 겪어 보셨나요?"
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-urinary-discomfort-001.f15",
+              "answer_quote": "이렇게 따가웠던 건 처음이에요.",
+              "support": "authored_quote",
+              "classification": "explicit_negative"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-urinary-discomfort-001.f15"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-urinary-discomfort-001.q11",
+          "intent": "현재 증상 관련 약",
+          "question": "이번 불편함 때문에 드신 약이 있나요?",
+          "patient_answer": "이번 증상 때문에 먹은 약은 없어요.",
+          "fact_unit_ids": [
+            "original-urinary-discomfort-001.f16"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "이번 불편함 때문에 드신 약이 있나요?",
+            "지금의 소변 불편감 때문에 복용하신 약이 있나요?",
+            "이번 증상을 줄이려고 먹은 약이 있으세요?"
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-urinary-discomfort-001.f16",
+              "answer_quote": "이번 증상 때문에 먹은 약은 없어요.",
+              "support": "authored_quote",
+              "classification": "explicit_negative"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-urinary-discomfort-001.f16"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-urinary-discomfort-001.q12",
+          "intent": "일상 영향과 걱정",
+          "question": "생활에서 무엇이 가장 불편하고 걱정되나요?",
+          "patient_answer": "안내 데스크를 보다가 화장실 때문에 자꾸 자리를 비우게 돼요. 동료에게 계속 교대해 달라고 해야 할까 봐 걱정이에요.",
+          "fact_unit_ids": [
+            "original-urinary-discomfort-001.f17",
+            "original-urinary-discomfort-001.f18"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "생활에서 무엇이 가장 불편하고 걱정되나요?",
+            "이번 증상으로 일상에서 어떤 점이 불편하며 무엇을 걱정하시나요?",
+            "생활에 생긴 불편과 가장 염려되는 점을 함께 말씀해 주세요."
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-urinary-discomfort-001.f17",
+              "answer_quote": "안내 데스크를 보다가 화장실 때문에 자꾸 자리를 비우게 돼요.",
+              "support": "authored_quote",
+              "classification": "known"
+            },
+            {
+              "fact_unit_id": "original-urinary-discomfort-001.f18",
+              "answer_quote": "동료에게 계속 교대해 달라고 해야 할까 봐 걱정이에요.",
+              "support": "authored_quote",
+              "classification": "known"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-urinary-discomfort-001.f17",
+              "original-urinary-discomfort-001.f18"
+            ],
+            "partial_question_allowed": false
+          }
+        }
+      ],
+      "response_boundary": {
+        "mode": "정해진 질문과 검토된 별칭만 정확히 연결하는 오프라인 문답입니다. 등록되지 않은 문장은 시스템 질문 확인으로 전환합니다.",
+        "known_fact_rule": "authored_fixed_answer에 있는 사실만 말합니다. 유도 질문이 설정과 충돌해도 동의하거나 사실을 바꾸지 않습니다.",
+        "negative_rule": "explicit_negative는 명시된 증상·기간의 환자 진술만 뜻하며 객관적 검사 결과나 질환 배제를 뜻하지 않습니다.",
+        "unknown_rule": "patient_unknown은 환자가 모르는 것으로 설정된 정보입니다. 묻지 않은 사실과 증상 부재를 구분합니다.",
+        "out_of_scope_rule": "이 사례에 설정하지 않은 항목은 저자 미설정으로 기록하며 환자의 실제 무지나 음성 소견으로 저장하지 않습니다.",
+        "out_of_scope_unknown_answer": "그 부분은 이 연습 사례에 정보가 설정되어 있지 않아 답할 수 없어요.",
+        "diagnosis_or_treatment_answer": "이 사례는 문진 연습만 제공하며 진단이나 치료 안내는 제공하지 않아요.",
+        "do_not_invent": [
+          "검사 결과",
+          "활력징후",
+          "진찰 소견",
+          "진단",
+          "약 용량 또는 복용 지시",
+          "설정되지 않은 병력",
+          "응급도 판정"
+        ],
+        "repeat_question_rule": "같은 의도 질문에는 같은 답변을 표시합니다. 시간 경과나 감정 변화로 사실을 변경하지 않습니다."
+      },
+      "learner_goal": [
+        "배뇨 시 느낌·빈도·양·동반 불편을 구체적으로 확인합니다.",
+        "열감이 없다는 진술과 측정 체온을 구분합니다.",
+        "임신 여부를 모른다는 답을 임신 가능성 없음으로 바꾸지 않습니다.",
+        "민감한 질문과 일상 영향을 존중하는 말투로 확인합니다."
+      ],
+      "formative_checklist": {
+        "kind": "author_created_question_coverage",
+        "validated": false,
+        "official_exam_alignment": false,
+        "score": null,
+        "passing_threshold": null,
+        "explanation": "질문 선택과 표시된 답변의 기록입니다. 질문 순서, 공감의 질, 실제 이해, 임상 판단 또는 시험 역량을 평가하지 않습니다.",
+        "items": [
+          {
+            "id": "original-urinary-discomfort-001.check01",
+            "label": "시작과 경과",
+            "evidence_question_ids": [
+              "original-urinary-discomfort-001.q01"
+            ],
+            "fact_unit_ids": [
+              "original-urinary-discomfort-001.f01",
+              "original-urinary-discomfort-001.f02"
+            ],
+            "state_when_selected": "해당 질문과 답변을 확인함",
+            "state_when_unselected": "아직 질문하지 않음"
+          },
+          {
+            "id": "original-urinary-discomfort-001.check02",
+            "label": "불편한 위치와 순간",
+            "evidence_question_ids": [
+              "original-urinary-discomfort-001.q02"
+            ],
+            "fact_unit_ids": [
+              "original-urinary-discomfort-001.f03"
+            ],
+            "state_when_selected": "해당 질문과 답변을 확인함",
+            "state_when_unselected": "아직 질문하지 않음"
+          },
+          {
+            "id": "original-urinary-discomfort-001.check03",
+            "label": "횟수와 양",
+            "evidence_question_ids": [
+              "original-urinary-discomfort-001.q03"
+            ],
+            "fact_unit_ids": [
+              "original-urinary-discomfort-001.f04",
+              "original-urinary-discomfort-001.f05"
+            ],
+            "state_when_selected": "해당 질문과 답변을 확인함",
+            "state_when_unselected": "아직 질문하지 않음"
+          },
+          {
+            "id": "original-urinary-discomfort-001.check04",
+            "label": "아랫배 불편",
+            "evidence_question_ids": [
+              "original-urinary-discomfort-001.q04"
+            ],
+            "fact_unit_ids": [
+              "original-urinary-discomfort-001.f06"
+            ],
+            "state_when_selected": "해당 질문과 답변을 확인함",
+            "state_when_unselected": "아직 질문하지 않음"
+          },
+          {
+            "id": "original-urinary-discomfort-001.check05",
+            "label": "열감과 체온 확인",
+            "evidence_question_ids": [
+              "original-urinary-discomfort-001.q05"
+            ],
+            "fact_unit_ids": [
+              "original-urinary-discomfort-001.f07",
+              "original-urinary-discomfort-001.f08"
+            ],
+            "state_when_selected": "해당 질문과 답변을 확인함",
+            "state_when_unselected": "아직 질문하지 않음"
+          },
+          {
+            "id": "original-urinary-discomfort-001.check06",
+            "label": "옆구리 통증과 구토",
+            "evidence_question_ids": [
+              "original-urinary-discomfort-001.q06"
+            ],
+            "fact_unit_ids": [
+              "original-urinary-discomfort-001.f09",
+              "original-urinary-discomfort-001.f10"
+            ],
+            "state_when_selected": "해당 질문과 답변을 확인함",
+            "state_when_unselected": "아직 질문하지 않음"
+          },
+          {
+            "id": "original-urinary-discomfort-001.check07",
+            "label": "눈으로 본 소변 색",
+            "evidence_question_ids": [
+              "original-urinary-discomfort-001.q07"
+            ],
+            "fact_unit_ids": [
+              "original-urinary-discomfort-001.f11"
+            ],
+            "state_when_selected": "해당 질문과 답변을 확인함",
+            "state_when_unselected": "아직 질문하지 않음"
+          },
+          {
+            "id": "original-urinary-discomfort-001.check08",
+            "label": "분비물 변화",
+            "evidence_question_ids": [
+              "original-urinary-discomfort-001.q08"
+            ],
+            "fact_unit_ids": [
+              "original-urinary-discomfort-001.f12"
+            ],
+            "state_when_selected": "해당 질문과 답변을 확인함",
+            "state_when_unselected": "아직 질문하지 않음"
+          },
+          {
+            "id": "original-urinary-discomfort-001.check09",
+            "label": "월경과 임신 여부",
+            "evidence_question_ids": [
+              "original-urinary-discomfort-001.q09"
+            ],
+            "fact_unit_ids": [
+              "original-urinary-discomfort-001.f13",
+              "original-urinary-discomfort-001.f14"
+            ],
+            "state_when_selected": "해당 질문과 답변을 확인함",
+            "state_when_unselected": "아직 질문하지 않음"
+          },
+          {
+            "id": "original-urinary-discomfort-001.check10",
+            "label": "이전의 비슷한 경험",
+            "evidence_question_ids": [
+              "original-urinary-discomfort-001.q10"
+            ],
+            "fact_unit_ids": [
+              "original-urinary-discomfort-001.f15"
+            ],
+            "state_when_selected": "해당 질문과 답변을 확인함",
+            "state_when_unselected": "아직 질문하지 않음"
+          },
+          {
+            "id": "original-urinary-discomfort-001.check11",
+            "label": "현재 증상 관련 약",
+            "evidence_question_ids": [
+              "original-urinary-discomfort-001.q11"
+            ],
+            "fact_unit_ids": [
+              "original-urinary-discomfort-001.f16"
+            ],
+            "state_when_selected": "해당 질문과 답변을 확인함",
+            "state_when_unselected": "아직 질문하지 않음"
+          },
+          {
+            "id": "original-urinary-discomfort-001.check12",
+            "label": "일상 영향과 걱정",
+            "evidence_question_ids": [
+              "original-urinary-discomfort-001.q12"
+            ],
+            "fact_unit_ids": [
+              "original-urinary-discomfort-001.f17",
+              "original-urinary-discomfort-001.f18"
+            ],
+            "state_when_selected": "해당 질문과 답변을 확인함",
+            "state_when_unselected": "아직 질문하지 않음"
+          }
+        ],
+        "caution": "모든 항목을 선택해도 완전한 문진, 안전한 진료, 시험 합격을 뜻하지 않습니다."
+      },
+      "clinical_plausibility_review": {
+        "status": "public_primary_institution_reference_only_not_expert_validated",
+        "source": {
+          "title": "NIDDK: Symptoms & Causes of Bladder Infection in Adults",
+          "url": "https://www.niddk.nih.gov/health-information/urologic-diseases/bladder-infection-uti-in-adults/symptoms-causes",
+          "accessed": "2026-10-08"
+        },
+        "scope": "증상과 환자가 말하는 일상 영향의 조합만 참고 확인했습니다. 진단 기준 충족, 안전한 처치, 완전한 문진 또는 평가 타당성을 검증하지 않았습니다."
+      },
+      "session_contract": {
+        "pin_fields": [
+          "schema_version",
+          "content_version",
+          "case_id",
+          "version"
+        ],
+        "reset_on_case_change": true,
+        "reset_on_version_change": true,
+        "mix_versions": false,
+        "initial_fact_coverage": [],
+        "opening_line_role": "주호소를 소개하는 첫 발화이며, 질문 체크리스트의 완료 근거로 자동 집계하지 않습니다.",
+        "fact_state_axes": [
+          "author_status",
+          "question_selected",
+          "answer_displayed"
+        ]
+      },
+      "input_matching": {
+        "mode": "exact_alias_whitelist",
+        "normalization": [
+          "Unicode NFKC",
+          "trim leading/trailing whitespace",
+          "collapse consecutive whitespace to one space"
+        ],
+        "aliases_are_author_reviewed": true,
+        "fuzzy_matching": false,
+        "substring_matching": false,
+        "regex_matching": false,
+        "multi_intent_policy": "하나의 등록 질문에 포함된 여러 사실 범위는 함께 답합니다. 서로 다른 등록 질문을 이어 붙이거나 일치 후보가 둘 이상이면 시스템 질문 확인으로 전환하며 사실을 공개하지 않습니다.",
+        "unmatched_response": "이 질문은 현재 정해진 문답과 정확히 연결되지 않아요. 아래 질문 중 하나를 선택해 주세요.",
+        "out_of_scope_response_role": "고정 환자 대사로 연기하지 않고 연습 시스템 안내로 표시합니다.",
+        "unmatched_route": "intent_confirmation",
+        "unmatched_response_role": "system",
+        "unmatched_revealed_fact_ids": [],
+        "alias_review_scope": "각 별칭이 원래 질문의 모든 요청 범위를 유지하는지 수동 대조했습니다. 임상 전문가 검증 또는 의미 이해 검증을 뜻하지 않습니다."
+      },
+      "input_challenge_fixtures": [
+        {
+          "id": "original-urinary-discomfort-001.reject01",
+          "kind": "partial",
+          "input": "열이 나요?",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        },
+        {
+          "id": "original-urinary-discomfort-001.reject02",
+          "kind": "partial",
+          "input": "마지막 생리는 언제예요?",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        },
+        {
+          "id": "original-urinary-discomfort-001.reject03",
+          "kind": "partial",
+          "input": "옆구리 아파요?",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        },
+        {
+          "id": "original-urinary-discomfort-001.reject04",
+          "kind": "leading",
+          "input": "임신은 아니시죠?",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        },
+        {
+          "id": "original-urinary-discomfort-001.reject05",
+          "kind": "leading",
+          "input": "체온은 정상이었죠?",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        },
+        {
+          "id": "original-urinary-discomfort-001.reject06",
+          "kind": "ambiguous",
+          "input": "다른 건요?",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        },
+        {
+          "id": "original-urinary-discomfort-001.reject07",
+          "kind": "out_of_scope",
+          "input": "소변검사 수치는 얼마인가요?",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        },
+        {
+          "id": "original-urinary-discomfort-001.reject08",
+          "kind": "out_of_scope",
+          "input": "어떤 항생제를 먹어야 하나요?",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        },
+        {
+          "id": "original-urinary-discomfort-001.reject09",
+          "kind": "partial",
+          "input": "소변에서 눈에 띄는 붉은색을 본 적이 있나요",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        },
+        {
+          "id": "original-urinary-discomfort-001.reject10",
+          "kind": "multi_intent",
+          "input": "따가움은 언제 시작됐고, 그 뒤로 어떻게 달라졌나요? 이번 불편함 때문에 드신 약이 있나요?",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        }
+      ]
+    },
+    {
+      "case_id": "original-episodic-headache-001",
+      "version": "1.1.0",
+      "locale": "ko-KR",
+      "title": "반복되는 두통이 생활에 미치는 영향",
+      "fictional_constructed": true,
+      "profile": {
+        "age": 38,
+        "adult": true,
+        "occupation": "번역 프리랜서",
+        "living_context": "주로 집에서 문서 작업을 하고 주말에는 독서 모임에 참여함"
+      },
+      "opening_facts": {
+        "patient_line": "가끔 머리가 아프면 하던 일을 멈춰야 해서 상담받으러 왔어요.",
+        "availability": "프로필과 첫 발화만 시작할 때 공개합니다. 아래 사실은 해당 질문을 했을 때 공개합니다."
+      },
+      "emotional_baseline": {
+        "initial": "현재 두통은 없지만 마감 일정과 겹칠까 걱정합니다.",
+        "when_asked_reveals": [
+          {
+            "intent": "생활 영향과 우려",
+            "behavior": "최근 모임을 놓친 이야기를 할 때 아쉬움을 표현합니다."
+          },
+          {
+            "intent": "사용한 약과 기억의 한계",
+            "behavior": "제품을 가져오지 않은 점을 떠올리며 기억나는 범위를 말합니다."
+          }
+        ],
+        "constraint": "일정이나 불안을 두통의 원인 또는 특정 질환의 증거로 단정하지 않습니다."
+      },
+      "fact_units": [
+        {
+          "id": "original-episodic-headache-001.f01",
+          "topic": "시작",
+          "statement": "비슷한 두통이 약 6개월 전부터 반복됐다.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-episodic-headache-001.q01"
+          ]
+        },
+        {
+          "id": "original-episodic-headache-001.f02",
+          "topic": "빈도",
+          "statement": "최근 3개월 동안 한 달에 약 2회 두통이 있었다.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-episodic-headache-001.q01"
+          ]
+        },
+        {
+          "id": "original-episodic-headache-001.f03",
+          "topic": "최근 발작",
+          "statement": "가장 최근 두통은 사흘 전이었으며 지금은 머리가 아프지 않다.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-episodic-headache-001.q02"
+          ]
+        },
+        {
+          "id": "original-episodic-headache-001.f04",
+          "topic": "지속",
+          "statement": "한 번 두통이 시작되면 보통 4~6시간 이어진다.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-episodic-headache-001.q03"
+          ]
+        },
+        {
+          "id": "original-episodic-headache-001.f05",
+          "topic": "시작 양상",
+          "statement": "통증은 한순간에 가장 심해지는 것이 아니라 약 30분 동안 서서히 세진다.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-episodic-headache-001.q04"
+          ]
+        },
+        {
+          "id": "original-episodic-headache-001.f06",
+          "topic": "위치",
+          "statement": "통증은 보통 오른쪽 관자놀이에 느껴진다.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-episodic-headache-001.q05"
+          ]
+        },
+        {
+          "id": "original-episodic-headache-001.f07",
+          "topic": "성질",
+          "statement": "아플 때 맥박처럼 욱신거리는 느낌이다.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-episodic-headache-001.q05"
+          ]
+        },
+        {
+          "id": "original-episodic-headache-001.f08",
+          "topic": "주관적 강도",
+          "statement": "가장 아플 때의 통증을 본인은 0~10 중 6 정도로 표현한다.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-episodic-headache-001.q06"
+          ]
+        },
+        {
+          "id": "original-episodic-headache-001.f09",
+          "topic": "오심",
+          "statement": "두통이 있을 때 속이 메스꺼워진다.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-episodic-headache-001.q07"
+          ]
+        },
+        {
+          "id": "original-episodic-headache-001.f10",
+          "topic": "빛 불편",
+          "statement": "두통이 있을 때 밝은 화면을 보는 것이 불편하다.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-episodic-headache-001.q07"
+          ]
+        },
+        {
+          "id": "original-episodic-headache-001.f11",
+          "topic": "근력 변화",
+          "statement": "두통이 있던 때 한쪽 팔이나 다리에 힘이 빠졌던 적은 없다.",
+          "status": "explicit_negative",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-episodic-headache-001.q08"
+          ]
+        },
+        {
+          "id": "original-episodic-headache-001.f12",
+          "topic": "말하기 변화",
+          "statement": "두통이 있던 때 말이 나오지 않거나 어눌해진 적은 없다.",
+          "status": "explicit_negative",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-episodic-headache-001.q08"
+          ]
+        },
+        {
+          "id": "original-episodic-headache-001.f13",
+          "topic": "열감",
+          "statement": "최근 두통이 있던 날 열이 나는 느낌은 없었다.",
+          "status": "explicit_negative",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-episodic-headache-001.q09"
+          ]
+        },
+        {
+          "id": "original-episodic-headache-001.f14",
+          "topic": "외상",
+          "statement": "두통이 시작되기 전후로 기억나는 머리 부상은 없다.",
+          "status": "explicit_negative",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-episodic-headache-001.q10"
+          ]
+        },
+        {
+          "id": "original-episodic-headache-001.f15",
+          "topic": "자가 복용 빈도",
+          "statement": "최근 3개월에는 두통이 생긴 날마다 집에 있던 진통제를 한 차례 복용했다.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-episodic-headache-001.q11"
+          ]
+        },
+        {
+          "id": "original-episodic-headache-001.f16",
+          "topic": "약 정보",
+          "statement": "복용한 진통제의 제품명과 성분은 기억하지 못한다.",
+          "status": "patient_unknown",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-episodic-headache-001.q11"
+          ]
+        },
+        {
+          "id": "original-episodic-headache-001.f17",
+          "topic": "생활 영향",
+          "statement": "사흘 전 두통 때문에 번역 작업을 멈추고 예정된 독서 모임에도 가지 못했다.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-episodic-headache-001.q12"
+          ]
+        },
+        {
+          "id": "original-episodic-headache-001.f18",
+          "topic": "우려",
+          "statement": "두통이 납품 마감일과 겹쳐 약속을 지키지 못할까 걱정한다.",
+          "status": "known",
+          "provenance": "fictional_author_constructed",
+          "visibility": "when_asked",
+          "reveal_on_intents": [
+            "original-episodic-headache-001.q12"
+          ]
+        }
+      ],
+      "intent_questions": [
+        {
+          "id": "original-episodic-headache-001.q01",
+          "intent": "시작과 빈도",
+          "question": "이런 두통은 언제부터였고, 요즘 얼마나 자주 있나요?",
+          "patient_answer": "6개월쯤 전부터 비슷하게 아팠어요. 최근 석 달 동안은 한 달에 두 번 정도였어요.",
+          "fact_unit_ids": [
+            "original-episodic-headache-001.f01",
+            "original-episodic-headache-001.f02"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "이런 두통은 언제부터였고, 요즘 얼마나 자주 있나요?",
+            "비슷한 두통이 처음 생긴 건 언제이고 최근에는 얼마나 자주 생기나요?",
+            "이런 두통의 시작 시점과 요즘 발생 빈도를 알려 주세요."
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-episodic-headache-001.f01",
+              "answer_quote": "6개월쯤 전부터 비슷하게 아팠어요.",
+              "support": "authored_quote",
+              "classification": "known"
+            },
+            {
+              "fact_unit_id": "original-episodic-headache-001.f02",
+              "answer_quote": "최근 석 달 동안은 한 달에 두 번 정도였어요.",
+              "support": "authored_quote",
+              "classification": "known"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-episodic-headache-001.f01",
+              "original-episodic-headache-001.f02"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-episodic-headache-001.q02",
+          "intent": "최근 두통과 현재 상태",
+          "question": "가장 최근에는 언제 아팠나요? 지금도 아픈가요?",
+          "patient_answer": "사흘 전에 아팠어요. 지금은 머리가 아프지 않아요.",
+          "fact_unit_ids": [
+            "original-episodic-headache-001.f03"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "가장 최근에는 언제 아팠나요? 지금도 아픈가요?",
+            "마지막으로 머리가 아팠던 때는 언제이며 현재도 통증이 있나요?",
+            "가장 최근 두통은 언제 있었고 지금 머리 상태는 어떤가요?"
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-episodic-headache-001.f03",
+              "answer_quote": "사흘 전에 아팠어요. 지금은 머리가 아프지 않아요.",
+              "support": "authored_quote",
+              "classification": "known"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-episodic-headache-001.f03"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-episodic-headache-001.q03",
+          "intent": "한 번의 지속 시간",
+          "question": "한 번 아프면 대체로 얼마나 오래 가나요?",
+          "patient_answer": "보통 네 시간에서 여섯 시간 정도 가요.",
+          "fact_unit_ids": [
+            "original-episodic-headache-001.f04"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "한 번 아프면 대체로 얼마나 오래 가나요?",
+            "두통이 한 번 생기면 보통 몇 시간 정도 이어지나요?",
+            "한 차례 머리가 아프기 시작하면 대개 얼마나 지속되나요?"
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-episodic-headache-001.f04",
+              "answer_quote": "보통 네 시간에서 여섯 시간 정도 가요.",
+              "support": "authored_quote",
+              "classification": "known"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-episodic-headache-001.f04"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-episodic-headache-001.q04",
+          "intent": "통증이 세지는 과정",
+          "question": "처음부터 한순간에 심하게 아픈가요, 아니면 점점 세지나요?",
+          "patient_answer": "한순간에 가장 심해지는 건 아니고, 30분쯤 지나면서 점점 세져요.",
+          "fact_unit_ids": [
+            "original-episodic-headache-001.f05"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "처음부터 한순간에 심하게 아픈가요, 아니면 점점 세지나요?",
+            "두통이 갑자기 최고로 심해지나요, 아니면 시간을 두고 점차 심해지나요?",
+            "통증이 시작될 때 한순간에 심한지 서서히 강해지는지 알려 주세요."
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-episodic-headache-001.f05",
+              "answer_quote": "한순간에 가장 심해지는 건 아니고, 30분쯤 지나면서 점점 세져요.",
+              "support": "authored_quote",
+              "classification": "known"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-episodic-headache-001.f05"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-episodic-headache-001.q05",
+          "intent": "위치와 성질",
+          "question": "어디가 어떤 느낌으로 아픈지 설명해 주실 수 있나요?",
+          "patient_answer": "주로 오른쪽 관자놀이가 아파요. 맥박 뛰듯 욱신거리는 느낌이에요.",
+          "fact_unit_ids": [
+            "original-episodic-headache-001.f06",
+            "original-episodic-headache-001.f07"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "어디가 어떤 느낌으로 아픈지 설명해 주실 수 있나요?",
+            "머리의 어느 부분이 아프고 통증 느낌은 어떤가요?",
+            "두통이 느껴지는 위치와 아픈 양상을 말씀해 주세요."
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-episodic-headache-001.f06",
+              "answer_quote": "주로 오른쪽 관자놀이가 아파요.",
+              "support": "authored_quote",
+              "classification": "known"
+            },
+            {
+              "fact_unit_id": "original-episodic-headache-001.f07",
+              "answer_quote": "맥박 뛰듯 욱신거리는 느낌이에요.",
+              "support": "authored_quote",
+              "classification": "known"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-episodic-headache-001.f06",
+              "original-episodic-headache-001.f07"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-episodic-headache-001.q06",
+          "intent": "주관적 통증 강도",
+          "question": "통증이 전혀 없을 때를 0, 생각할 수 있는 가장 심한 통증을 10이라 하면 어느 정도인가요?",
+          "patient_answer": "가장 아플 때는 제 느낌으로 6 정도예요.",
+          "fact_unit_ids": [
+            "original-episodic-headache-001.f08"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "통증이 전혀 없을 때를 0, 생각할 수 있는 가장 심한 통증을 10이라 하면 어느 정도인가요?",
+            "통증 없음이 0점, 상상할 수 있는 가장 심한 통증이 10점이면 가장 아플 때 몇 점인가요?",
+            "0은 전혀 아프지 않음, 10은 생각할 수 있는 최대 통증일 때 가장 심한 두통은 몇 점인가요?"
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-episodic-headache-001.f08",
+              "answer_quote": "가장 아플 때는 제 느낌으로 6 정도예요.",
+              "support": "authored_quote",
+              "classification": "known"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-episodic-headache-001.f08"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-episodic-headache-001.q07",
+          "intent": "속 불편과 빛",
+          "question": "머리가 아플 때 속이 메스껍거나 밝은 화면이 불편한가요?",
+          "patient_answer": "아플 때 속이 메스꺼워져요. 밝은 화면을 보는 것도 불편해요.",
+          "fact_unit_ids": [
+            "original-episodic-headache-001.f09",
+            "original-episodic-headache-001.f10"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "머리가 아플 때 속이 메스껍거나 밝은 화면이 불편한가요?",
+            "두통 중에 메스꺼운 느낌이나 밝은 화면을 볼 때 불편함이 있나요?",
+            "머리가 아픈 동안 속이 메스꺼워지나요? 밝은 화면도 보기 불편한가요?"
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-episodic-headache-001.f09",
+              "answer_quote": "아플 때 속이 메스꺼워져요.",
+              "support": "authored_quote",
+              "classification": "known"
+            },
+            {
+              "fact_unit_id": "original-episodic-headache-001.f10",
+              "answer_quote": "밝은 화면을 보는 것도 불편해요.",
+              "support": "authored_quote",
+              "classification": "known"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-episodic-headache-001.f09",
+              "original-episodic-headache-001.f10"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-episodic-headache-001.q08",
+          "intent": "힘과 말하기의 변화",
+          "question": "아플 때 한쪽 팔다리 힘이 빠지거나 말하기가 달라진 적이 있나요?",
+          "patient_answer": "한쪽 팔이나 다리에 힘이 빠진 적은 없어요. 말이 안 나오거나 어눌해진 적도 없어요.",
+          "fact_unit_ids": [
+            "original-episodic-headache-001.f11",
+            "original-episodic-headache-001.f12"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "아플 때 한쪽 팔다리 힘이 빠지거나 말하기가 달라진 적이 있나요?",
+            "두통이 있을 때 한쪽 팔이나 다리에 힘이 빠지거나 말하는 데 변화가 있었나요?",
+            "머리가 아플 때 한쪽 팔다리의 힘과 말하기에 평소와 다른 점이 있었나요?"
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-episodic-headache-001.f11",
+              "answer_quote": "한쪽 팔이나 다리에 힘이 빠진 적은 없어요.",
+              "support": "authored_quote",
+              "classification": "explicit_negative"
+            },
+            {
+              "fact_unit_id": "original-episodic-headache-001.f12",
+              "answer_quote": "말이 안 나오거나 어눌해진 적도 없어요.",
+              "support": "authored_quote",
+              "classification": "explicit_negative"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-episodic-headache-001.f11",
+              "original-episodic-headache-001.f12"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-episodic-headache-001.q09",
+          "intent": "최근 두통 때 열감",
+          "question": "최근 두통이 있던 날에 열이 나는 느낌도 있었나요?",
+          "patient_answer": "사흘 전 머리가 아플 때 열이 나는 느낌은 없었어요.",
+          "fact_unit_ids": [
+            "original-episodic-headache-001.f13"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "최근 두통이 있던 날에 열이 나는 느낌도 있었나요?",
+            "가장 최근에 머리가 아팠던 날 몸에 열이 나는 느낌이 있었나요?",
+            "최근 두통 당시 열감을 느낀 적이 있나요?"
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-episodic-headache-001.f13",
+              "answer_quote": "사흘 전 머리가 아플 때 열이 나는 느낌은 없었어요.",
+              "support": "authored_quote",
+              "classification": "explicit_negative"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-episodic-headache-001.f13"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-episodic-headache-001.q10",
+          "intent": "머리 부상 경험",
+          "question": "이 두통이 시작되기 전후로 머리를 다친 기억이 있나요?",
+          "patient_answer": "그 무렵 머리를 다친 기억은 없어요.",
+          "fact_unit_ids": [
+            "original-episodic-headache-001.f14"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "이 두통이 시작되기 전후로 머리를 다친 기억이 있나요?",
+            "이런 두통이 생기기 전이나 후에 머리를 다친 기억이 있으세요?",
+            "두통이 시작된 무렵 머리에 부상을 입었던 일이 기억나시나요?"
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-episodic-headache-001.f14",
+              "answer_quote": "그 무렵 머리를 다친 기억은 없어요.",
+              "support": "authored_quote",
+              "classification": "explicit_negative"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-episodic-headache-001.f14"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-episodic-headache-001.q11",
+          "intent": "사용한 약과 기억의 한계",
+          "question": "두통 때문에 드신 약이 있나요? 어떤 약을 얼마나 자주 드셨는지 기억나세요?",
+          "patient_answer": "최근 석 달은 아픈 날마다 집에 있던 진통제를 한 번씩 먹었어요. 제품명이나 성분은 기억이 안 나요.",
+          "fact_unit_ids": [
+            "original-episodic-headache-001.f15",
+            "original-episodic-headache-001.f16"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "두통 때문에 드신 약이 있나요? 어떤 약을 얼마나 자주 드셨는지 기억나세요?",
+            "두통 때문에 약을 복용했나요? 어떤 약이었고 얼마나 자주 먹었는지 기억하시나요?",
+            "머리가 아파서 먹은 약이 있다면 어떤 약인지와 복용 빈도를 기억나는 만큼 알려 주세요."
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-episodic-headache-001.f15",
+              "answer_quote": "최근 석 달은 아픈 날마다 집에 있던 진통제를 한 번씩 먹었어요.",
+              "support": "authored_quote",
+              "classification": "known"
+            },
+            {
+              "fact_unit_id": "original-episodic-headache-001.f16",
+              "answer_quote": "제품명이나 성분은 기억이 안 나요.",
+              "support": "authored_quote",
+              "classification": "patient_unknown"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-episodic-headache-001.f15",
+              "original-episodic-headache-001.f16"
+            ],
+            "partial_question_allowed": false
+          }
+        },
+        {
+          "id": "original-episodic-headache-001.q12",
+          "intent": "생활 영향과 우려",
+          "question": "두통이 생활에 어떤 영향을 주고, 무엇이 가장 걱정되나요?",
+          "patient_answer": "사흘 전에는 번역 일을 멈추고 독서 모임에도 못 갔어요. 납품 마감일에 또 아파서 약속을 못 지킬까 봐 걱정돼요.",
+          "fact_unit_ids": [
+            "original-episodic-headache-001.f17",
+            "original-episodic-headache-001.f18"
+          ],
+          "response_mode": "authored_fixed_answer",
+          "exact_aliases": [
+            "두통이 생활에 어떤 영향을 주고, 무엇이 가장 걱정되나요?",
+            "두통 때문에 일상에 어떤 지장이 생겼고 어떤 점이 걱정되세요?",
+            "머리 아픈 것이 생활에 미친 영향과 가장 염려하는 점을 말씀해 주세요."
+          ],
+          "revealed_fact_evidence": [
+            {
+              "fact_unit_id": "original-episodic-headache-001.f17",
+              "answer_quote": "사흘 전에는 번역 일을 멈추고 독서 모임에도 못 갔어요.",
+              "support": "authored_quote",
+              "classification": "known"
+            },
+            {
+              "fact_unit_id": "original-episodic-headache-001.f18",
+              "answer_quote": "납품 마감일에 또 아파서 약속을 못 지킬까 봐 걱정돼요.",
+              "support": "authored_quote",
+              "classification": "known"
+            }
+          ],
+          "alias_review": {
+            "method": "manual_scope_comparison",
+            "requested_fact_unit_ids": [
+              "original-episodic-headache-001.f17",
+              "original-episodic-headache-001.f18"
+            ],
+            "partial_question_allowed": false
+          }
+        }
+      ],
+      "response_boundary": {
+        "mode": "정해진 질문과 검토된 별칭만 정확히 연결하는 오프라인 문답입니다. 등록되지 않은 문장은 시스템 질문 확인으로 전환합니다.",
+        "known_fact_rule": "authored_fixed_answer에 있는 사실만 말합니다. 유도 질문이 설정과 충돌해도 동의하거나 사실을 바꾸지 않습니다.",
+        "negative_rule": "explicit_negative는 명시된 증상·기간의 환자 진술만 뜻하며 객관적 검사 결과나 질환 배제를 뜻하지 않습니다.",
+        "unknown_rule": "patient_unknown은 환자가 모르는 것으로 설정된 정보입니다. 묻지 않은 사실과 증상 부재를 구분합니다.",
+        "out_of_scope_rule": "이 사례에 설정하지 않은 항목은 저자 미설정으로 기록하며 환자의 실제 무지나 음성 소견으로 저장하지 않습니다.",
+        "out_of_scope_unknown_answer": "그 부분은 이 연습 사례에 정보가 설정되어 있지 않아 답할 수 없어요.",
+        "diagnosis_or_treatment_answer": "이 사례는 문진 연습만 제공하며 진단이나 치료 안내는 제공하지 않아요.",
+        "do_not_invent": [
+          "검사 결과",
+          "활력징후",
+          "진찰 소견",
+          "진단",
+          "약 용량 또는 복용 지시",
+          "설정되지 않은 병력",
+          "응급도 판정"
+        ],
+        "repeat_question_rule": "같은 의도 질문에는 같은 답변을 표시합니다. 시간 경과나 감정 변화로 사실을 변경하지 않습니다."
+      },
+      "learner_goal": [
+        "반복 양상과 최근 한 번의 두통을 구분하여 시간 경과를 확인합니다.",
+        "통증의 위치·성질·주관적 강도와 동반 경험을 환자의 말로 기록합니다.",
+        "기억나지 않는 약 정보를 추정하거나 임의의 약 이름으로 채우지 않습니다.",
+        "증상 부재 몇 개만으로 원인이나 안전성을 결론 내리지 않습니다."
+      ],
+      "formative_checklist": {
+        "kind": "author_created_question_coverage",
+        "validated": false,
+        "official_exam_alignment": false,
+        "score": null,
+        "passing_threshold": null,
+        "explanation": "질문 선택과 표시된 답변의 기록입니다. 질문 순서, 공감의 질, 실제 이해, 임상 판단 또는 시험 역량을 평가하지 않습니다.",
+        "items": [
+          {
+            "id": "original-episodic-headache-001.check01",
+            "label": "시작과 빈도",
+            "evidence_question_ids": [
+              "original-episodic-headache-001.q01"
+            ],
+            "fact_unit_ids": [
+              "original-episodic-headache-001.f01",
+              "original-episodic-headache-001.f02"
+            ],
+            "state_when_selected": "해당 질문과 답변을 확인함",
+            "state_when_unselected": "아직 질문하지 않음"
+          },
+          {
+            "id": "original-episodic-headache-001.check02",
+            "label": "최근 두통과 현재 상태",
+            "evidence_question_ids": [
+              "original-episodic-headache-001.q02"
+            ],
+            "fact_unit_ids": [
+              "original-episodic-headache-001.f03"
+            ],
+            "state_when_selected": "해당 질문과 답변을 확인함",
+            "state_when_unselected": "아직 질문하지 않음"
+          },
+          {
+            "id": "original-episodic-headache-001.check03",
+            "label": "한 번의 지속 시간",
+            "evidence_question_ids": [
+              "original-episodic-headache-001.q03"
+            ],
+            "fact_unit_ids": [
+              "original-episodic-headache-001.f04"
+            ],
+            "state_when_selected": "해당 질문과 답변을 확인함",
+            "state_when_unselected": "아직 질문하지 않음"
+          },
+          {
+            "id": "original-episodic-headache-001.check04",
+            "label": "통증이 세지는 과정",
+            "evidence_question_ids": [
+              "original-episodic-headache-001.q04"
+            ],
+            "fact_unit_ids": [
+              "original-episodic-headache-001.f05"
+            ],
+            "state_when_selected": "해당 질문과 답변을 확인함",
+            "state_when_unselected": "아직 질문하지 않음"
+          },
+          {
+            "id": "original-episodic-headache-001.check05",
+            "label": "위치와 성질",
+            "evidence_question_ids": [
+              "original-episodic-headache-001.q05"
+            ],
+            "fact_unit_ids": [
+              "original-episodic-headache-001.f06",
+              "original-episodic-headache-001.f07"
+            ],
+            "state_when_selected": "해당 질문과 답변을 확인함",
+            "state_when_unselected": "아직 질문하지 않음"
+          },
+          {
+            "id": "original-episodic-headache-001.check06",
+            "label": "주관적 통증 강도",
+            "evidence_question_ids": [
+              "original-episodic-headache-001.q06"
+            ],
+            "fact_unit_ids": [
+              "original-episodic-headache-001.f08"
+            ],
+            "state_when_selected": "해당 질문과 답변을 확인함",
+            "state_when_unselected": "아직 질문하지 않음"
+          },
+          {
+            "id": "original-episodic-headache-001.check07",
+            "label": "속 불편과 빛",
+            "evidence_question_ids": [
+              "original-episodic-headache-001.q07"
+            ],
+            "fact_unit_ids": [
+              "original-episodic-headache-001.f09",
+              "original-episodic-headache-001.f10"
+            ],
+            "state_when_selected": "해당 질문과 답변을 확인함",
+            "state_when_unselected": "아직 질문하지 않음"
+          },
+          {
+            "id": "original-episodic-headache-001.check08",
+            "label": "힘과 말하기의 변화",
+            "evidence_question_ids": [
+              "original-episodic-headache-001.q08"
+            ],
+            "fact_unit_ids": [
+              "original-episodic-headache-001.f11",
+              "original-episodic-headache-001.f12"
+            ],
+            "state_when_selected": "해당 질문과 답변을 확인함",
+            "state_when_unselected": "아직 질문하지 않음"
+          },
+          {
+            "id": "original-episodic-headache-001.check09",
+            "label": "최근 두통 때 열감",
+            "evidence_question_ids": [
+              "original-episodic-headache-001.q09"
+            ],
+            "fact_unit_ids": [
+              "original-episodic-headache-001.f13"
+            ],
+            "state_when_selected": "해당 질문과 답변을 확인함",
+            "state_when_unselected": "아직 질문하지 않음"
+          },
+          {
+            "id": "original-episodic-headache-001.check10",
+            "label": "머리 부상 경험",
+            "evidence_question_ids": [
+              "original-episodic-headache-001.q10"
+            ],
+            "fact_unit_ids": [
+              "original-episodic-headache-001.f14"
+            ],
+            "state_when_selected": "해당 질문과 답변을 확인함",
+            "state_when_unselected": "아직 질문하지 않음"
+          },
+          {
+            "id": "original-episodic-headache-001.check11",
+            "label": "사용한 약과 기억의 한계",
+            "evidence_question_ids": [
+              "original-episodic-headache-001.q11"
+            ],
+            "fact_unit_ids": [
+              "original-episodic-headache-001.f15",
+              "original-episodic-headache-001.f16"
+            ],
+            "state_when_selected": "해당 질문과 답변을 확인함",
+            "state_when_unselected": "아직 질문하지 않음"
+          },
+          {
+            "id": "original-episodic-headache-001.check12",
+            "label": "생활 영향과 우려",
+            "evidence_question_ids": [
+              "original-episodic-headache-001.q12"
+            ],
+            "fact_unit_ids": [
+              "original-episodic-headache-001.f17",
+              "original-episodic-headache-001.f18"
+            ],
+            "state_when_selected": "해당 질문과 답변을 확인함",
+            "state_when_unselected": "아직 질문하지 않음"
+          }
+        ],
+        "caution": "모든 항목을 선택해도 완전한 문진, 안전한 진료, 시험 합격을 뜻하지 않습니다."
+      },
+      "clinical_plausibility_review": {
+        "status": "public_primary_institution_reference_only_not_expert_validated",
+        "source": {
+          "title": "NINDS: Migraine",
+          "url": "https://www.ninds.nih.gov/Disorders/All-Disorders/Migraine-Information-Page",
+          "accessed": "2026-10-08"
+        },
+        "scope": "증상과 환자가 말하는 일상 영향의 조합만 참고 확인했습니다. 진단 기준 충족, 안전한 처치, 완전한 문진 또는 평가 타당성을 검증하지 않았습니다."
+      },
+      "session_contract": {
+        "pin_fields": [
+          "schema_version",
+          "content_version",
+          "case_id",
+          "version"
+        ],
+        "reset_on_case_change": true,
+        "reset_on_version_change": true,
+        "mix_versions": false,
+        "initial_fact_coverage": [],
+        "opening_line_role": "주호소를 소개하는 첫 발화이며, 질문 체크리스트의 완료 근거로 자동 집계하지 않습니다.",
+        "fact_state_axes": [
+          "author_status",
+          "question_selected",
+          "answer_displayed"
+        ]
+      },
+      "input_matching": {
+        "mode": "exact_alias_whitelist",
+        "normalization": [
+          "Unicode NFKC",
+          "trim leading/trailing whitespace",
+          "collapse consecutive whitespace to one space"
+        ],
+        "aliases_are_author_reviewed": true,
+        "fuzzy_matching": false,
+        "substring_matching": false,
+        "regex_matching": false,
+        "multi_intent_policy": "하나의 등록 질문에 포함된 여러 사실 범위는 함께 답합니다. 서로 다른 등록 질문을 이어 붙이거나 일치 후보가 둘 이상이면 시스템 질문 확인으로 전환하며 사실을 공개하지 않습니다.",
+        "unmatched_response": "이 질문은 현재 정해진 문답과 정확히 연결되지 않아요. 아래 질문 중 하나를 선택해 주세요.",
+        "out_of_scope_response_role": "고정 환자 대사로 연기하지 않고 연습 시스템 안내로 표시합니다.",
+        "unmatched_route": "intent_confirmation",
+        "unmatched_response_role": "system",
+        "unmatched_revealed_fact_ids": [],
+        "alias_review_scope": "각 별칭이 원래 질문의 모든 요청 범위를 유지하는지 수동 대조했습니다. 임상 전문가 검증 또는 의미 이해 검증을 뜻하지 않습니다."
+      },
+      "input_challenge_fixtures": [
+        {
+          "id": "original-episodic-headache-001.reject01",
+          "kind": "partial",
+          "input": "언제 아팠나요?",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        },
+        {
+          "id": "original-episodic-headache-001.reject02",
+          "kind": "partial",
+          "input": "약 드셨어요?",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        },
+        {
+          "id": "original-episodic-headache-001.reject03",
+          "kind": "partial",
+          "input": "속이 메스꺼워요?",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        },
+        {
+          "id": "original-episodic-headache-001.reject04",
+          "kind": "leading",
+          "input": "타이레놀을 먹었죠?",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        },
+        {
+          "id": "original-episodic-headache-001.reject05",
+          "kind": "leading",
+          "input": "뇌 검사는 정상이었죠?",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        },
+        {
+          "id": "original-episodic-headache-001.reject06",
+          "kind": "ambiguous",
+          "input": "그때는요?",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        },
+        {
+          "id": "original-episodic-headache-001.reject07",
+          "kind": "out_of_scope",
+          "input": "뇌 MRI 결과를 말해 주세요.",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        },
+        {
+          "id": "original-episodic-headache-001.reject08",
+          "kind": "out_of_scope",
+          "input": "응급실에 가야 하나요?",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        },
+        {
+          "id": "original-episodic-headache-001.reject09",
+          "kind": "partial",
+          "input": "한 번 아프면 대체로 얼마나 오래 가나요",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        },
+        {
+          "id": "original-episodic-headache-001.reject10",
+          "kind": "multi_intent",
+          "input": "가장 최근에는 언제 아팠나요? 지금도 아픈가요? 한 번 아프면 대체로 얼마나 오래 가나요?",
+          "expected_route": "intent_confirmation",
+          "expected_role": "system",
+          "expected_patient_answer": null,
+          "expected_revealed_fact_ids": []
+        }
+      ]
+    }
+  ]
+}
