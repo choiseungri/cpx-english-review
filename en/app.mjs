@@ -1,6 +1,6 @@
-import {initLanguageSwitch,isProjectAnchor} from '../project-front/render.mjs';
+import {initLanguageSwitch,isProjectAnchor} from '../project-front/render.mjs?v=cpx-20261009-1436';
 const updateLanguageLinks=initLanguageSwitch();
-import {renderProject} from './presentation.mjs';
+import {renderProject} from './presentation.mjs?v=cpx-20261009-1436';
 import {viewFromHash,hashForView} from './routing.mjs';
 import {createSession,appendQuestion,appendAssistance,review,retrySession,compareSessions,cloneDraft,publishDraft,validateCase,exportJSON,MODE} from './core.mjs';
 import {createStore} from './storage.mjs';

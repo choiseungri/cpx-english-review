@@ -29,7 +29,7 @@ Planned evaluation focuses on case consistency, unasked-information leakage, quo
 
 ## Evidence and limits
 
-The repository includes a working static demo, original Korean source, English review translation, and reproducible software tests. The current bundle passes 166 software tests (67 Korean, 66 English, 20 guided-demo checks, 13 introduction/navigation checks). Browser visual review of the latest demonstration remains pending. Software checks are not clinical validation. No user, revenue, funding, or educational-effectiveness claims are made.
+The repository includes a working static demo, original Korean source, English review translation, and reproducible software tests. The current bundle passes 169 software tests (68 Korean, 67 English, 20 guided-demo checks, 14 introduction/navigation checks). Browser visual review of the latest demonstration remains pending. Software checks are not clinical validation. No user, revenue, funding, or educational-effectiveness claims are made.
 
 All included cases are original fictional educational material. This is not a patient-care or clinical decision-support tool. No real patient data, private case collection, account identifiers, or credentials are included.
 

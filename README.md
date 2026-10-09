@@ -36,7 +36,7 @@ After the project introduction, the landing pages include a **scripted preview o
 
 The experience is controlled by **native page scrolling**, with no autoplay clock, forced scrolling, snap points or wheel/touch interception. Whole student questions, SP replies and adjacent evidence respond to their viewport position. Prior conversation remains fully readable above. Feedback source links return to the exact dialogue pair. Reduced motion, or “Read all without motion,” displays all text without movement. The entrance portrait scrolls out naturally. Student questions now simulate voice transcription: complete grapheme clusters appear with local scroll progress, accompanied by a small input waveform and caret. The full question reserves its final dimensions and remains accessible; SP replies and facts appear only once the question is complete. This is a scripted input example, with no microphone permission, recording, speech service or audio.
 
-Software verification: **166 tests passed** (67 original Korean, 66 English, 20 guided-demo checks, 13 front/language/navigation checks). These checks cover software behavior; they are not live-model or clinical validation.
+Software verification: **169 tests passed** (68 original Korean, 67 English, 20 guided-demo checks, 14 front/language/navigation checks). These checks cover software behavior; they are not live-model or clinical validation.
 
 ## Planned Claude integration
 
@@ -69,3 +69,5 @@ For clinical education only, not patient care or clinical decision-making. All i
 ## Included materials
 
 `site/` contains the Korean product source and assets. `en/` contains the English review adaptation. `software-tests/` contains the original regression suite; `english-tests/` checks the adaptation; `guided-tests/` checks the demonstration. `guided-demo/` contains the shared scroll demonstration. `project-front/` contains the bilingual project copy, intro renderer, language helpers, styling and locally embedded assets. `front-tests/` verifies the new introduction and navigation. `design/` contains the approved visual references and an accurate production-asset usage note. The font license notice is retained in each edition's `assets/FONT-LICENSE.txt`. No open-source license is assigned to the original project by this review bundle.
+
+The HTML entry, project presentation, bilingual copy and shared renderer use a common release query to prevent stale browser modules from mixing copy schemas. UI regression tests load the actual HTML script entry and visit every workbench view in both languages.
