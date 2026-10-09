@@ -26,7 +26,7 @@ The current prototype uses **deterministic authored responses**. A typed questio
 
 English is the default entry. A visible English / 한국어 switch selects the matching introduction, demonstration and practice workbench. It retains known workbench views; in-page demo anchors safely return to the other edition’s project view. Existing language-specific practice records stay in their original stores.
 
-The page explains the purpose and four-step learning loop before the demonstration. After it, exact dialogue examples show the planned patient and separate feedback roles, followed by the proposed 30-scenario evaluation and support request. Overview, Demo and Why Claude anchors are distinct from the actual Practice workspace. Further existing prototype detail is available in an expandable section.
+The opening defines CPX with a linked medical-school source, distinguishes the broader exam from this interview-focused project, and explains the need for repeatable solo practice. An exact exchange from the original fictional sleep case illustrates the difference between mentioning a topic and checking an assumption. The editorial narrative then connects solo practice to the four-step learning loop, and distinguishes today’s authored responses from the planned Claude API roles before the demonstration. The existing paper texture, illustrations and peach/olive dialogue styling are retained. After it, exact dialogue examples show the planned patient and separate feedback roles, followed by the proposed 30-scenario evaluation and support request. Overview, Demo and Why Claude anchors are distinct from the actual Practice workspace. Further existing prototype detail is available in an expandable section.
 
 ## Guided demonstration
 
@@ -34,7 +34,7 @@ After the project introduction, the landing pages include a **scripted preview o
 
 The experience is controlled by **native page scrolling**, with no autoplay clock, forced scrolling, snap points or wheel/touch interception. Whole student questions, SP replies and adjacent evidence respond to their viewport position. Prior conversation remains fully readable above. Feedback source links return to the exact dialogue pair. Reduced motion, or “Read all without motion,” displays all text without movement. The entrance portrait scrolls out naturally. Student questions now simulate voice transcription: complete grapheme clusters appear with local scroll progress, accompanied by a small input waveform and caret. The full question reserves its final dimensions and remains accessible; SP replies and facts appear only once the question is complete. This is a scripted input example, with no microphone permission, recording, speech service or audio.
 
-Software verification: **160 tests passed** (67 original Korean, 66 English, 20 guided-demo checks, 7 front/language/navigation checks). These checks cover software behavior; they are not live-model or clinical validation.
+Software verification: **164 tests passed** (67 original Korean, 66 English, 20 guided-demo checks, 11 front/language/navigation checks). These checks cover software behavior; they are not live-model or clinical validation.
 
 ## Planned Claude integration
 

@@ -2,16 +2,11 @@ export const frontCopy = {
   "lang": "en",
   "eyebrow": "A clinical-interview practice project",
   "headline": "Ask with purpose. Learn from the conversation.",
-  "lead": "CPX Practice Lab brings authored patient cases, interview practice and dialogue-based review into one place. Built for medical students practicing clinical interviews in Korean.",
+  "lead": "Listen to the patient. Choose the next question. Revisit what you missed. CPX Practice Lab is a student-led project for making Korean clinical-interview practice easier to repeat on your own.",
   "byline": "CHOI JUNHO · Student creator · Started February 2026",
   "languageNote": "Originally developed in Korean. English translation for review.",
   "primary": "Explore the demonstration",
   "secondary": "Try the practice workbench",
-  "storyTitle": "A question is only the beginning.",
-  "paragraphs": [
-    "A useful practice session leaves more than a conversation transcript. It lets the learner see what a question actually elicited, which information remains unknown, and what to ask differently on the next attempt.",
-    "The project connects that loop: a fictional case sets the facts; the interview records what was asked and answered; review brings the learner back to specific words; a focused goal carries into another attempt."
-  ],
   "loopTitle": "One case. A traceable learning loop.",
   "loop": [
     "Start from an authored case. Patient facts and unknowns belong to a defined case version, so a practice session keeps the context it started with.",
@@ -55,5 +50,48 @@ export const frontCopy = {
     "observation": "This assumes both the amount and the cause.",
     "alternative": "How many cups of coffee do you drink a day, and when do you usually drink them?",
     "constraint": "Drinks one cup of coffee each morning and another around 16:00 every day."
+  },
+  "sourceLabel": "CPX background · Gachon University College of Medicine",
+  "sourceUrl": "https://medicine.gachon.ac.kr/sub01_about/page04_02_t02.php",
+  "narrative": {
+    "exam": {
+      "eyebrow": "First, what is CPX?",
+      "title": "A clinical exam built around a patient encounter.",
+      "paragraphs": [
+        "CPX stands for Clinical Performance Examination. In Korean medical education, it assesses how a student conducts a consultation with a standardized patient: a person portraying the symptoms and circumstances of a defined case.",
+        "The student takes a history, performs a physical examination, and provides explanations and patient education. The encounter asks students to put medical knowledge into practice, while listening and communicating with the person in front of them."
+      ],
+      "scope": "This project focuses on the interview and dialogue review. It does not replace hands-on physical-examination training or official exam assessment."
+    },
+    "challenge": {
+      "eyebrow": "Where practice matters",
+      "title": "Choosing the next question from the patient’s answer.",
+      "paragraphs": [
+        "Knowing to ask about caffeine when discussing sleep is one part of the task. Finding the words is another. A student might ask about the amount and timing step by step, or build an unconfirmed assumption into the question itself.",
+        "This short exchange comes from an original fictional case in the project. The student has assumed both an amount and a cause. The patient has to correct the premise first."
+      ],
+      "exampleLabel": "Original fictional case · Difficulty sleeping",
+      "studentLabel": "Student question",
+      "patientLabel": "Patient reply",
+      "reflection": "The useful review goes beyond whether caffeine was mentioned. What did the student assume before checking? What did the patient actually say? How should that answer change the next question?",
+      "retryLabel": "A question to try next time"
+    },
+    "purpose": {
+      "eyebrow": "Why I am building this",
+      "title": "A place to make another attempt, on your own.",
+      "paragraphs": [
+        "Taking turns with a practice partner and reviewing each other’s interviews is valuable. But another attempt should also be possible when a partner or shared time is hard to arrange. The goal is to give solo practice a patient’s response, so the student can work through what happens after the question, too.",
+        "The experience I am building continues beyond a single conversation. Start with an authored case, conduct the interview, review the words that were actually exchanged, then return to the same case with something specific to change. A vague intention to ask better questions becomes a concrete next step: ask about the amount and timing separately, without assuming either."
+      ]
+    },
+    "bridge": {
+      "eyebrow": "The next step with the Claude API",
+      "title": "Responding to the question I express, not just the one I select.",
+      "paragraphs": [
+        "The current workbench returns authored patient responses for registered question expressions or an explicitly selected question intent. The case, transcript, quotation review and retry workflow is implemented. A model that understands freely worded questions is not connected yet.",
+        "That is where I plan to use the Claude API. The patient role should understand natural Korean questions while staying within the case facts, correcting mistaken premises and leaving unknown information unknown. A separate feedback role would cite the actual conversation to explain its observations and suggest a specific change for the next attempt."
+      ],
+      "transition": "Below is an authored demonstration of a full interview and review, illustrating the experience planned for a live API connection."
+    }
   }
 };
