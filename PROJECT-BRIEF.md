@@ -1,6 +1,6 @@
 # CPX Practice Lab — project brief
 
-**Creator:** CHOI JUNHO · South Korea  
+**Creator:** CHOI JUNHO · Medical student, Hanyang University College of Medicine · South Korea  
 **Started:** February 2026  
 **Stage:** Student-built, independent early-stage prototype; not an incorporated company  
 **Language:** Originally developed in Korean; English translation prepared for review
@@ -19,7 +19,7 @@ The current response engine is deterministic: it returns authored responses for 
 
 ## Guided example of the planned experience
 
-The landing page explains CPX, the challenge of choosing a next question, and the project’s repeatable interview-and-review goal. An exact fictional exchange makes the challenge concrete. It distinguishes the current engine from the planned Claude roles before continuing into a native-scroll, cumulative scripted workflow: twelve student–patient exchanges, correction of a mistaken question premise, question-domain coverage of 10/12, quote-linked feedback and retry goals. It previews the planned API experience separately from the authored-response practice engine. Student-only scroll-driven transcription illustrates future voice input without accessing a microphone. The demonstration makes no live API calls and does not represent measured model performance.
+The landing page first explains the educational rationale for CPX in five substantial subsections: demonstrated performance, observable clinical tasks, standardized patients, feedback-linked simulation practice, and this project’s focused scope. It then connects the challenge of choosing a next question to the project’s repeatable interview-and-review goal. An exact fictional exchange makes the challenge concrete. It distinguishes the current engine from the planned Claude roles before continuing into a native-scroll, cumulative scripted workflow: twelve student–patient exchanges, correction of a mistaken question premise, question-domain coverage of 10/12, quote-linked feedback and retry goals. It previews the planned API experience separately from the authored-response practice engine. Student-only scroll-driven transcription illustrates future voice input without accessing a microphone. The demonstration makes no live API calls and does not represent measured model performance.
 
 ## Next development step
 
@@ -29,7 +29,7 @@ Planned evaluation focuses on case consistency, unasked-information leakage, quo
 
 ## Evidence and limits
 
-The repository includes a working static demo, original Korean source, English review translation, and reproducible software tests. The current bundle passes 164 software tests (67 Korean, 66 English, 20 guided-demo checks, 11 introduction/navigation checks). Browser visual review of the latest demonstration remains pending. Software checks are not clinical validation. No user, revenue, funding, or educational-effectiveness claims are made.
+The repository includes a working static demo, original Korean source, English review translation, and reproducible software tests. The current bundle passes 166 software tests (67 Korean, 66 English, 20 guided-demo checks, 13 introduction/navigation checks). Browser visual review of the latest demonstration remains pending. Software checks are not clinical validation. No user, revenue, funding, or educational-effectiveness claims are made.
 
 All included cases are original fictional educational material. This is not a patient-care or clinical decision-support tool. No real patient data, private case collection, account identifiers, or credentials are included.
 
